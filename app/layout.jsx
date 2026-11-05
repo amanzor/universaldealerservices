@@ -6,7 +6,7 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Universal Dealer Services | On-Site Insurance Verification for Auto Dealers',
   description:
-    'We place licensed, bilingual insurance agents inside Florida dealerships, verify coverage on every delivery at zero cost, and pay your store rent. Protect your dealership from uninsured drive-off liability and unlock back-end F&I budget.',
+    'Licensed, bilingual insurance agents inside your Florida dealership shop every customer across any carrier at delivery — free. Savings go back into the monthly budget your F&I office sells against, Spanish-first buyers close faster, and we pay your store rent.',
   keywords: [
     'auto dealer insurance verification',
     'dealership insurance compliance Florida',
@@ -21,9 +21,9 @@ export const metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'Universal Dealer Services',
-    title: 'The only vendor in your building that pays you rent.',
+    title: 'Unlock your back-end budget — in English and Spanish.',
     description:
-      'On-site insurance verification for every delivery. Zero cost to the dealership — we pay rent. A Universal Insurance Brokers program for Florida dealers.',
+      'On-site, bilingual insurance shopping at delivery frees monthly budget your F&I office recaptures. Zero cost to the dealership — we pay rent. A Universal Insurance Brokers program.',
     images: [
       {
         url: 'https://d8j0ntlcm91z4.cloudfront.net/user_3KZOsOFTTcGuVNkHbHD4aNfk63r/hf_20261105_145650_c4dfe02e-47a8-44a5-aa8b-c3f52cab9081.png',

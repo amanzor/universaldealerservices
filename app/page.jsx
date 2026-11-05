@@ -16,9 +16,9 @@ function Header() {
           </span>
         </a>
         <nav className="hidden items-center gap-7 text-sm text-paper/80 md:flex">
-          <a href="#exposure" className="hover:text-white">The exposure</a>
-          <a href="#shield" className="hover:text-white">Compliance Shield</a>
           <a href="#unlock" className="hover:text-white">Back-end unlock</a>
+          <a href="#bilingual" className="hover:text-white">Bilingual advantage</a>
+          <a href="#shield" className="hover:text-white">Compliance Shield</a>
           <a href="#pilot" className="hover:text-white">The pilot</a>
         </nav>
         <a
@@ -38,15 +38,17 @@ function Hero() {
       <div className="mx-auto grid max-w-site items-center gap-10 px-5 pb-16 pt-14 lg:grid-cols-[1.1fr_1fr] lg:pb-24 lg:pt-20">
         <div>
           <p className="hero-reveal mb-5 inline-block border-l-2 border-cyan-brand pl-3 text-sm font-medium text-paper/75">
-            On-site insurance verification for Florida dealerships
+            On-site insurance services for Florida dealerships — in English and Spanish
           </p>
           <h1 className="hero-reveal hero-reveal-2 font-display text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
-            The only vendor in your building that pays you rent.
+            Your F&I menu isn&rsquo;t losing to objections. It&rsquo;s losing to the
+            insurance bill.
           </h1>
           <p className="hero-reveal hero-reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-paper/80">
-            We station licensed, bilingual agents inside your dealership to verify
-            real, active coverage on every delivery — with any carrier your customer
-            has. It costs your store nothing. We pay rent for the desk.
+            Our licensed, bilingual agents shop every customer&rsquo;s insurance across
+            any carrier at delivery — free. The monthly savings go back into the
+            budget your F&I office sells against. It costs your store nothing, and we
+            pay rent for the desk.
           </p>
           <div className="hero-reveal hero-reveal-3 mt-8 flex flex-wrap gap-4">
             <a
@@ -139,6 +141,95 @@ function Numbers() {
   );
 }
 
+const bilingualStats = [
+  {
+    value: '~20%',
+    label: 'Hispanic share of new-vehicle purchases nationally — and rising',
+    note: 'NADA, 2026',
+  },
+  {
+    value: '68%',
+    label: 'Share of the auto industry’s sales growth driven by Hispanic buyers',
+    note: 'S&P Global Mobility',
+  },
+  {
+    value: '$2.8T',
+    label: 'Projected U.S. Hispanic buying power, up from $2.1 trillion',
+    note: 'S&P Global Mobility data',
+  },
+  {
+    value: '52%',
+    label: 'How much less likely Spanish-speaking customers are to respond to English-only outreach',
+    note: 'Industry language-gap data',
+  },
+  {
+    value: '+10 cars',
+    label: 'Monthly sales lift one dealer reported immediately after adding a single bilingual salesperson',
+    note: 'Auto Dealer Today',
+  },
+];
+
+function Bilingual() {
+  return (
+    <section id="bilingual" className="bg-navy-900 py-16 lg:py-24">
+      <div className="mx-auto max-w-site px-5">
+        <div className="max-w-3xl">
+          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+            &ldquo;Se habla español&rdquo; isn&rsquo;t a courtesy. It&rsquo;s a
+            production line.
+          </h2>
+          <p className="mt-4 leading-relaxed text-paper/80">
+            In Florida showrooms, Spanish-first buyers are not a niche — they are the
+            traffic. A deal that stalls in the box because the insurance call only
+            happens in English is a dead deal. Every Universal agent closes the
+            verification, quoting, and binding conversation in the customer&rsquo;s
+            language, so the deal keeps moving and the F&I menu stays alive.
+          </p>
+        </div>
+        <div className="mt-10">
+          {bilingualStats.map((s) => (
+            <div
+              key={s.value}
+              className="ledger-row grid gap-2 py-5 sm:grid-cols-[10rem_1fr_auto] sm:items-baseline sm:gap-6"
+            >
+              <span className="font-display text-4xl font-bold text-cyan-brand">
+                {s.value}
+              </span>
+              <span className="text-paper/85">{s.label}</span>
+              <span className="text-sm text-paper/50">{s.note}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <div className="rounded-sm bg-navy-800 p-6 ring-1 ring-white/10">
+            <p className="font-display text-lg font-semibold text-white">
+              What it looks like on your floor
+            </p>
+            <p className="mt-2 text-paper/75">
+              Dealerships that committed to bilingual teams have doubled their sales
+              to Hispanic customers and led their brand&rsquo;s region doing it. The
+              stores winning this traffic aren&rsquo;t translating — they&rsquo;re
+              staffing. Our agents give you that capability on day one, without a
+              single hire.
+            </p>
+          </div>
+          <div className="rounded-sm bg-navy-800 p-6 ring-1 ring-white/10">
+            <p className="font-display text-lg font-semibold text-white">
+              Where it compounds
+            </p>
+            <p className="mt-2 text-paper/75">
+              A Spanish-first buyer who gets insurance handled in their language
+              refers family, returns to your service lane, and renews through us —
+              which means they come back through you. Bilingual service is the
+              loyalty program your competitors can&rsquo;t copy with a banner.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const exposures = [
   {
     title: 'Spot deliveries',
@@ -198,7 +289,7 @@ function Shield() {
     <section id="shield" className="bg-navy-900 py-16 lg:py-24">
       <div className="mx-auto grid max-w-site gap-12 px-5 lg:grid-cols-2 lg:items-center">
         <div>
-          <p className="mb-3 text-sm font-semibold text-cyan-brand">Program one</p>
+          <p className="mb-3 text-sm font-semibold text-cyan-brand">Program two</p>
           <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
             The Compliance Shield
           </h2>
@@ -265,7 +356,7 @@ function Unlock() {
     <section id="unlock" className="bg-paper py-16 text-ink lg:py-24">
       <div className="mx-auto max-w-site px-5">
         <div className="max-w-3xl">
-          <p className="mb-3 text-sm font-semibold text-cyan-deep">Program two</p>
+          <p className="mb-3 text-sm font-semibold text-cyan-deep">Program one</p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
             The Back-End Budget Unlock
           </h2>
@@ -343,7 +434,7 @@ const steps = [
 
 function Pilot() {
   return (
-    <section id="pilot" className="bg-navy-900 py-16 lg:py-24">
+    <section id="pilot" className="bg-navy-950 py-16 lg:py-24">
       <div className="mx-auto max-w-site px-5">
         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
           How the pilot works
@@ -465,9 +556,10 @@ export default function Page() {
       <Header />
       <Hero />
       <Numbers />
+      <Unlock />
+      <Bilingual />
       <Exposure />
       <Shield />
-      <Unlock />
       <Pilot />
       <About />
       <Contact />
