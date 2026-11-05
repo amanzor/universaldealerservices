@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-display: 'Barlow Semi Condensed';
+  --font-body: 'Barlow';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+body {
+  @apply bg-navy-900 text-paper font-body antialiased;
+}
+
+/* Single orchestrated page-load moment: the hero reveals once. */
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-reveal-2 {
+  animation-delay: 0.15s;
+}
+.hero-reveal-3 {
+  animation-delay: 0.3s;
+}
+@keyframes heroIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ledger rule used in the stats band */
+.ledger-row {
+  border-top: 1px solid rgba(25, 184, 232, 0.25);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #19b8e8;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
