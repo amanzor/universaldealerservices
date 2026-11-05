@@ -11,14 +11,25 @@ npm install
 npm run dev
 ```
 
+## Structure
+
+- `content/en.js`, `content/es.js` — all page copy (English at `/`, Spanish at `/es/`). Edit copy here; both pages share `components/DealerPage.jsx`.
+- `app/(en)` and `app/(es)/es` — one root layout per language so each page ships the right `<html lang>`, canonical, and hreflang tags.
+- `lib/site.js` — phone, email, hero image, metadata and InsuranceAgency JSON-LD builders.
+- `public/hero.jpg` — hero / OpenGraph image (served locally).
+
 ## Deploy
 
-`npm run build` outputs a fully static site to `out/`. Import the repo into Vercel (zero config) or Cloudflare Pages (build command `npm run build`, output directory `out`).
+`npm run build` outputs a fully static site to `out/`. The repo is set up for Vercel with zero config; `universaldealerservices.com` is registered on Vercel — attach it under Project → Settings → Domains.
 
-Point `universaldealerservices.com` at the deployment, then add a "Dealer Ventures" link from universalinsurancebroker.com to this site to pass link equity both ways.
+### Contact form
+
+The walkthrough form posts JSON to `NEXT_PUBLIC_FORM_ENDPOINT` if that environment variable is set (any Formspree / Basin / Getform-style endpoint). Without it, the form opens the visitor's email app with the request pre-filled to universalinsurancebroker@gmail.com. To turn on direct submissions: create a form at formspree.io, then in Vercel add `NEXT_PUBLIC_FORM_ENDPOINT=https://formspree.io/f/<id>` and redeploy.
 
 ## To do
 
-- [ ] **Localize the hero image**: the hero currently hotlinks a Higgsfield-generated image from its CDN. Download it to `public/hero.jpg` and change the `src` in `app/page.jsx` (Hero section) and the OpenGraph image URL in `app/layout.jsx` to `/hero.jpg` so it never breaks.
-- [ ] Add a Spanish (`/es`) version of the page for bilingual SEO.
-- [ ] Wire the contact section to a form endpoint (currently tel/mailto links).
+- [x] Localize the hero image (`public/hero.jpg`)
+- [x] Spanish `/es/` page with hreflang + sitemap
+- [x] Contact form (set `NEXT_PUBLIC_FORM_ENDPOINT` to receive submissions directly)
+- [ ] Attach `universaldealerservices.com` to the Vercel project
+- [ ] Add a "Dealer Ventures" link from universalinsurancebroker.com to this site to pass link equity both ways
