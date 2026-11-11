@@ -14,7 +14,7 @@ const jsonLd = {
   '@type': 'InsuranceAgency',
   '@id': `${siteUrl}/#organization`,
   name: 'Universal Dealer Services',
-  logo: `${siteUrl}/icon.png`,
+  logo: `${siteUrl}/logo.png`,
   image: `${siteUrl}/hero.jpg`,
   parentOrganization: {
     '@type': 'InsuranceAgency',

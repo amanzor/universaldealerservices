@@ -19,7 +19,8 @@ Point `universaldealerservices.com` at the deployment, then add a "Dealer Ventur
 
 ## Notes
 
-- **Hero image** lives in `public/hero.jpg` (1344×752) and `hero-sm.jpg` (672×376, phones and the one-pager). Generated with Higgsfield (GPT Image) from the previous photo: a Latina advisor with a Black and a white customer, with no readable text on the desk items. If you replace it, keep the same sizes and rebuild the one-pagers with `node scripts/build-leave-behind.mjs`.
+- **Hero image** lives in `public/hero.jpg` (1344×752) and `hero-sm.jpg` (672×376, phones and the one-pager). Generated with Higgsfield (GPT Image): a Latina advisor with a Black and a white customer; the desk sign and folder carry the Universal Dealer Services logo and the clipboard shows a sample quote table. If you replace it, keep the same sizes and rebuild the one-pagers with `node scripts/build-leave-behind.mjs`.
+- **Logo:** source files are in `brand/` (`uds-mark.svg` rounded, `uds-mark-square.svg` full-bleed, plus PNG exports for directories). The site uses `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico` and `public/logo.png` (structured data); regenerate all of them from the SVG if the mark changes.
 - **Contact form** (`app/ContactForm.jsx`) posts to FormSubmit using the same inbox alias as universalinsurancebroker.com. FormSubmit activates each site origin once: the first submission from `https://universaldealerservices.com/` sends an "Activate Form" email to the lead inbox, and nothing is delivered until it is clicked.
 - **Sources** for every statistic are listed in the footer. Keep claims tied to a source and have the legal/liability wording reviewed by an attorney before changing it.
 
