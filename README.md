@@ -23,6 +23,8 @@ Point `universaldealerservices.com` at the deployment, then add a "Dealer Ventur
 - **Contact form** (`app/ContactForm.jsx`) posts to FormSubmit using the same inbox alias as universalinsurancebroker.com. FormSubmit activates each site origin once: the first submission from `https://universaldealerservices.com/` sends an "Activate Form" email to the lead inbox, and nothing is delivered until it is clicked.
 - **Sources** for every statistic are listed in the footer. Keep claims tied to a source and have the legal/liability wording reviewed by an attorney before changing it.
 
+- **Two languages:** all copy lives in `app/content.js` (`en` and `es`); `app/DealerPage.jsx` is the shared layout. Change a claim, number or source in both languages. `npm run build` runs `scripts/set-es-lang.mjs`, which marks `out/es/` pages as `lang="es"`. Page titles, descriptions and hreflang live in `app/seo.js`; `app/sitemap.js` and `app/robots.js` generate `sitemap.xml` and `robots.txt`.
+
 ## To do
 
-- [ ] Add a Spanish (`/es`) version of the page for bilingual SEO.
+- [x] Spanish version at `/es/` (hreflang, sitemap, `lang="es"`).

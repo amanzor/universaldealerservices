@@ -16,7 +16,7 @@ const field =
   'w-full rounded-sm border border-white/15 bg-navy-900 px-4 py-3 text-paper placeholder:text-paper/40 focus:border-cyan-brand focus:outline-none focus:ring-1 focus:ring-cyan-brand';
 const label = 'mb-1 block text-sm font-medium text-paper/80';
 
-export default function ContactForm() {
+export default function ContactForm({ lang, strings: f }) {
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
   async function onSubmit(e) {
@@ -37,8 +37,9 @@ export default function ContactForm() {
           Email: data.email,
           Rooftops: data.rooftops,
           Message: data.message,
-          Source: 'universaldealerservices.com',
-          _subject: `Dealer walkthrough request — ${data.dealership || data.name}`,
+          Language: f.languageTag,
+          Source: lang === 'es' ? 'universaldealerservices.com/es/' : 'universaldealerservices.com',
+          _subject: `Dealer walkthrough request${lang === 'es' ? ' (Spanish)' : ''} — ${data.dealership || data.name}`,
           _replyto: data.email,
           _template: 'table',
           _captcha: 'false',
@@ -59,11 +60,8 @@ export default function ContactForm() {
   if (status === 'sent') {
     return (
       <div role="status" className="mx-auto mt-10 max-w-2xl rounded-sm bg-navy-800 p-8 text-left ring-1 ring-cyan-brand/40">
-        <p className="font-display text-2xl font-bold text-white">Request received.</p>
-        <p className="mt-2 text-paper/75">
-          A member of our dealer team will contact you within one business day to set up
-          your walkthrough and the free 90-day delivery audit.
-        </p>
+        <p className="font-display text-2xl font-bold text-white">{f.sentTitle}</p>
+        <p className="mt-2 text-paper/75">{f.sentBody}</p>
       </div>
     );
   }
@@ -72,27 +70,27 @@ export default function ContactForm() {
     <form onSubmit={onSubmit} className="mx-auto mt-10 grid max-w-2xl gap-5 text-left sm:grid-cols-2">
       <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
       <div>
-        <label htmlFor="name" className={label}>Your name *</label>
+        <label htmlFor="name" className={label}>{f.name}</label>
         <input id="name" name="name" required autoComplete="name" className={field} />
       </div>
       <div>
-        <label htmlFor="title" className={label}>Title</label>
-        <input id="title" name="title" placeholder="GM, Dealer Principal, F&I Director…" autoComplete="organization-title" className={field} />
+        <label htmlFor="title" className={label}>{f.title}</label>
+        <input id="title" name="title" placeholder={f.titlePlaceholder} autoComplete="organization-title" className={field} />
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor="dealership" className={label}>Dealership or dealer group *</label>
+        <label htmlFor="dealership" className={label}>{f.dealership}</label>
         <input id="dealership" name="dealership" required autoComplete="organization" className={field} />
       </div>
       <div>
-        <label htmlFor="phone" className={label}>Phone *</label>
+        <label htmlFor="phone" className={label}>{f.phone}</label>
         <input id="phone" name="phone" type="tel" required autoComplete="tel" className={field} />
       </div>
       <div>
-        <label htmlFor="email" className={label}>Email *</label>
+        <label htmlFor="email" className={label}>{f.email}</label>
         <input id="email" name="email" type="email" required autoComplete="email" className={field} />
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor="rooftops" className={label}>Number of rooftops</label>
+        <label htmlFor="rooftops" className={label}>{f.rooftops}</label>
         <select id="rooftops" name="rooftops" className={field} defaultValue="1">
           <option value="1">1</option>
           <option value="2–5">2–5</option>
@@ -101,7 +99,7 @@ export default function ContactForm() {
         </select>
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor="message" className={label}>Anything we should know?</label>
+        <label htmlFor="message" className={label}>{f.message}</label>
         <textarea id="message" name="message" rows={4} className={field} />
       </div>
       <div className="sm:col-span-2">
@@ -110,12 +108,11 @@ export default function ContactForm() {
           disabled={status === 'sending'}
           className="w-full rounded-sm bg-cyan-brand px-7 py-3 font-semibold text-navy-950 transition hover:bg-white disabled:opacity-60"
         >
-          {status === 'sending' ? 'Sending…' : 'Request a walkthrough'}
+          {status === 'sending' ? f.sending : f.submit}
         </button>
         {status === 'error' && (
           <p role="alert" className="mt-3 text-sm text-amber-rent">
-            We couldn&rsquo;t send your request. Please call (239) 204-2208 or email
-            quotes@universalinsurancebroker.com.
+            {f.error}
           </p>
         )}
       </div>
