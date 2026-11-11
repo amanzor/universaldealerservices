@@ -26,9 +26,9 @@ export const metadata = {
       'On-site, bilingual insurance shopping at delivery frees monthly budget your F&I office recaptures. Zero cost to the dealership — we pay rent. A Universal Insurance Brokers program.',
     images: [
       {
-        url: 'https://d8j0ntlcm91z4.cloudfront.net/user_3KZOsOFTTcGuVNkHbHD4aNfk63r/hf_20261105_145650_c4dfe02e-47a8-44a5-aa8b-c3f52cab9081.png',
-        width: 1536,
-        height: 1024,
+        url: '/hero.jpg',
+        width: 1344,
+        height: 752,
         alt: 'Insurance agent serving clients inside a dealership showroom',
       },
     ],
@@ -53,12 +53,13 @@ const jsonLd = {
   },
   url: siteUrl,
   telephone: '+1-239-204-2208',
-  email: 'universalinsurancebroker@gmail.com',
+  email: 'quotes@universalinsurancebroker.com',
   areaServed: { '@type': 'State', name: 'Florida' },
   availableLanguage: ['English', 'Spanish'],
   description:
     'Universal Dealer Services places licensed, bilingual insurance agents inside auto dealerships to verify coverage on every delivery, protect dealers from uninsured drive-off liability, and increase back-end F&I product penetration. The service is free to the dealership — Universal pays rent for its in-store presence.',
   location: [
+    { '@type': 'Place', name: 'Hialeah Office', address: { '@type': 'PostalAddress', streetAddress: '1943 W 68th St', addressLocality: 'Hialeah', addressRegion: 'FL', postalCode: '33014' } },
     { '@type': 'Place', name: 'Doral Office', address: { '@type': 'PostalAddress', addressLocality: 'Doral', addressRegion: 'FL' } },
     { '@type': 'Place', name: 'Boca Raton Office', address: { '@type': 'PostalAddress', addressLocality: 'Boca Raton', addressRegion: 'FL' } },
     { '@type': 'Place', name: 'Lehigh Acres Office', address: { '@type': 'PostalAddress', addressLocality: 'Lehigh Acres', addressRegion: 'FL' } },
