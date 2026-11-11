@@ -1,29 +1,35 @@
 import ContactForm from './ContactForm';
 import { content, email, onePagerHref, phone, phoneHref } from './content';
 import { pageMetadata, siteUrl } from './seo';
+import { GUIDES, guideIndex, guidePath } from './guides/data';
 
 const ledgerGrid = 'ledger-row grid gap-2 py-5 sm:grid-cols-[10rem_1fr_auto] sm:items-baseline sm:gap-6';
 
-function Header({ t }) {
+// base: '' on the home page; the home path ('/' or '/es/') on other pages, so the
+// section links point back to the home page. switchHref: the other-language URL.
+export function Header({ t, base = '', switchHref }) {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy-900/95 backdrop-blur">
       <div className="mx-auto flex max-w-site items-center justify-between gap-3 px-5 py-3">
-        <a href="#top" className="flex items-baseline gap-2">
-          <span className="font-display text-xl font-bold tracking-tight text-white">
+        <a href={base ? base : '#top'} className="flex items-baseline gap-2">
+          <span className="whitespace-nowrap font-display text-xl font-bold tracking-tight text-white">
             Universal Dealer Services
           </span>
-          <span className="hidden text-xs text-paper/60 sm:inline">{t.header.byline}</span>
+          <span className="hidden text-xs text-paper/60 sm:inline lg:hidden xl:inline">{t.header.byline}</span>
         </a>
-        <nav className="hidden items-center gap-7 text-sm text-paper/80 lg:flex">
+        <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-paper/80 lg:flex xl:gap-7">
           {t.header.nav.map(([href, label]) => (
-            <a key={href} href={href} className="hover:text-white">
+            <a key={href} href={`${base}${href}`} className="hover:text-white">
               {label}
             </a>
           ))}
+          <a href={guideIndex[t.lang].path} className="hover:text-white">
+            {guideIndex[t.lang].crumb}
+          </a>
         </nav>
         <div className="flex items-center gap-3">
           <a
-            href={t.switchLang.href}
+            href={switchHref || t.switchLang.href}
             hrefLang={t.switchLang.hrefLang}
             lang={t.switchLang.hrefLang}
             aria-label={t.switchLang.aria}
@@ -32,8 +38,8 @@ function Header({ t }) {
             {t.switchLang.label}
           </a>
           <a
-            href="#contact"
-            className="hidden rounded-sm bg-cyan-brand px-4 py-2 text-sm font-semibold text-navy-950 hover:bg-white sm:inline-block"
+            href={`${base}#contact`}
+            className="hidden whitespace-nowrap rounded-sm bg-cyan-brand px-4 py-2 text-sm font-semibold text-navy-950 hover:bg-white sm:inline-block"
           >
             {t.header.cta}
           </a>
@@ -267,6 +273,31 @@ function Pilot({ t }) {
   );
 }
 
+function GuidesTeaser({ t }) {
+  const g = guideIndex[t.lang];
+  return (
+    <section id="guides" className="bg-paper py-16 text-ink lg:py-20">
+      <div className="mx-auto max-w-site px-5">
+        <h2 className="font-display text-3xl font-bold sm:text-4xl">{g.title}</h2>
+        <p className="mt-3 max-w-2xl text-ink/70">{g.lede}</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {GUIDES.map((guide) => (
+            <a
+              key={guide.key}
+              href={guidePath(guide, t.lang)}
+              className="group block rounded-sm bg-white p-6 shadow-sm ring-1 ring-ink/10 transition hover:ring-cyan-deep"
+            >
+              <h3 className="font-display text-xl font-semibold group-hover:text-cyan-deep">{guide[t.lang].title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">{guide[t.lang].description}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-cyan-deep">{g.read} →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Faq({ t }) {
   return (
     <section id="faq" className="bg-navy-900 py-16 lg:py-20">
@@ -400,7 +431,7 @@ function Contact({ t, emailHref }) {
   );
 }
 
-function Footer({ t, emailHref }) {
+export function Footer({ t, emailHref, switchHref }) {
   const f = t.footer;
   return (
     <footer className="border-t border-white/10 bg-navy-950 py-10">
@@ -417,7 +448,10 @@ function Footer({ t, emailHref }) {
             <a href={emailHref} className="hover:text-white">
               {f.emailLabel}
             </a>
-            <a href={t.switchLang.href} hrefLang={t.switchLang.hrefLang} lang={t.switchLang.hrefLang} className="hover:text-white">
+            <a href={guideIndex[t.lang].path} className="hover:text-white">
+              {guideIndex[t.lang].crumb}
+            </a>
+            <a href={switchHref || t.switchLang.href} hrefLang={t.switchLang.hrefLang} lang={t.switchLang.hrefLang} className="hover:text-white">
               {t.switchLang.label}
             </a>
           </nav>
@@ -460,6 +494,7 @@ export default function DealerPage({ lang }) {
       <Exposure t={t} />
       <Shield t={t} />
       <Pilot t={t} />
+      <GuidesTeaser t={t} />
       <Faq t={t} />
       <About t={t} />
       <Contact t={t} emailHref={emailHref} />
