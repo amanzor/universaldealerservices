@@ -15,9 +15,9 @@ const ogImage = {
 
 export const pageMetadata = {
   en: {
-    title: 'Universal Dealer Services | On-Site Insurance Verification for Auto Dealers',
+    title: 'Florida Dealer Insurance Verification | Universal Dealer Services',
     description:
-      'Licensed, bilingual insurance agents inside your Florida dealership shop every customer across any carrier at delivery — free. Savings go back into the monthly budget your F&I office sells against, Spanish-first buyers close faster, and we pay your store rent.',
+      'Licensed, bilingual agents in your Florida dealership verify insurance on every delivery and shop each customer’s coverage free. No cost to you: we pay you rent.',
     keywords: [
       'auto dealer insurance verification',
       'dealership insurance compliance Florida',
@@ -46,9 +46,9 @@ export const pageMetadata = {
     },
   },
   es: {
-    title: 'Agentes de seguros bilingües para concesionarios en Florida | Universal Dealer Services',
+    title: 'Verificación de seguro para concesionarios | Universal Dealer Services',
     description:
-      'Agentes de seguros licenciados y bilingües dentro de su concesionario en Florida: verifican la cobertura en cada entrega y cotizan el seguro de cada cliente gratis. El ahorro regresa al presupuesto de F&I, y nosotros le pagamos renta.',
+      'Agentes licenciados y bilingües verifican el seguro en cada entrega y cotizan gratis el seguro de cada cliente. Sin costo para su concesionario: le pagamos renta.',
     keywords: [
       'verificación de seguro para concesionarios',
       'agente de seguros en el concesionario',
