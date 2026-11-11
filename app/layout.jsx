@@ -1,4 +1,5 @@
 import './globals.css';
+import Analytics from './Analytics';
 
 import { siteUrl } from './seo';
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
