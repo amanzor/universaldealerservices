@@ -150,7 +150,7 @@ const en = {
       'Live verification of active, adequate coverage — any carrier the customer has',
       'A documented audit trail for every delivery, test drive, and spot delivery',
       'Same-day binding when a customer shows up uninsured, so deals close instead of stalling',
-      'Fourteen-plus years in Florida insurance, in English and Spanish',
+      '10+ years in Florida insurance, in English and Spanish',
     ],
     ledgerTitle: 'What your ledger sees',
     ledger: [
@@ -193,7 +193,7 @@ const en = {
 
   about: {
     title: 'A Universal Insurance Brokers program',
-    body: 'Independent Florida brokerage with offices in Hialeah, Doral, Boca Raton and Lehigh Acres. Fourteen-plus years in insurance, six in dealership sales — we’ve sat on both sides of the desk. Auto, home, commercial, and health, in English and Spanish.',
+    body: 'Independent Florida brokerage with offices in Hialeah, Doral, Boca Raton and Lehigh Acres. 10+ years in insurance, six in dealership sales — we’ve sat on both sides of the desk. Auto, home, commercial, and health, in English and Spanish.',
     link: 'Visit universalinsurancebroker.com',
   },
 
@@ -389,7 +389,7 @@ const es = {
       'Verificación en vivo de cobertura activa y adecuada — con cualquier aseguradora que tenga el cliente',
       'Un registro documentado de cada entrega, prueba de manejo y entrega inmediata',
       'Emisión de póliza el mismo día cuando un cliente llega sin seguro, para que las ventas se cierren en vez de estancarse',
-      'Más de catorce años en seguros en Florida, en español y en inglés',
+      'Más de 10 años en seguros en Florida, en español y en inglés',
     ],
     ledgerTitle: 'Lo que ve su contabilidad',
     ledger: [
@@ -432,7 +432,7 @@ const es = {
 
   about: {
     title: 'Un programa de Universal Insurance Brokers',
-    body: 'Correduría de seguros independiente en Florida, con oficinas en Hialeah, Doral, Boca Raton y Lehigh Acres. Más de catorce años en seguros y seis en ventas de concesionarios — hemos estado en los dos lados del escritorio. Seguros de auto, hogar, comerciales y de salud, en español y en inglés.',
+    body: 'Correduría de seguros independiente en Florida, con oficinas en Hialeah, Doral, Boca Raton y Lehigh Acres. Más de 10 años en seguros y seis en ventas de concesionarios — hemos estado en los dos lados del escritorio. Seguros de auto, hogar, comerciales y de salud, en español y en inglés.',
     link: 'Visite universalinsurancebroker.com',
   },
 
