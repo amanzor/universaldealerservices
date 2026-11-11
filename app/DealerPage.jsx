@@ -1,5 +1,5 @@
 import ContactForm from './ContactForm';
-import { content, email, onePagerHref, phone, phoneHref } from './content';
+import { content, email, phone, phoneHref } from './content';
 import { pageMetadata, siteUrl } from './seo';
 import { GUIDES, guideIndex, guidePath } from './guides/data';
 
@@ -419,7 +419,7 @@ function Contact({ t, emailHref }) {
         </div>
         <p className="mt-6 text-sm">
           <a
-            href={onePagerHref}
+            href={t.contact.pdfHref}
             download
             className="text-paper/70 underline decoration-paper/30 underline-offset-4 hover:text-white"
           >
