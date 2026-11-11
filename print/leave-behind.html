@@ -13,48 +13,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
   @page { size: 8.5in 11in; margin: 0; }
-  :root { --navy-950:#0A1426; --navy-900:#0E1B33; --paper:#F5F8FC; --ink:#122038; --cyan:#19B8E8; --cyan-deep:#0E8FB8; --amber:#E8A33D; }
+  /* Brand colors from the logo (same as Universal Insurance Brokers) */
+  :root { --navy:#101D53; --navy-deep:#0B1440; --blue:#086BB7; --sky:#EAF2FA; --ink:#14203F; --muted:rgba(20,32,63,.74); }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Barlow', sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .display { font-family: 'Barlow Semi Condensed', sans-serif; }
   .page { width: 8.5in; height: 11in; overflow: hidden; display: flex; flex-direction: column; }
 
-  .band { background: var(--navy-900); color: #fff; display: grid; grid-template-columns: 1fr 2.4in; gap: 0.35in; align-items: center; padding: 0.42in 0.6in 0.4in; }
-  .brand { font-size: 10pt; color: rgba(245,248,252,.7); letter-spacing: .02em; }
-  .brand b { color: #fff; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13pt; margin-right: 6px; }
-  h1 { margin-top: 0.16in; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 32pt; line-height: 1.02; }
-  .sub { margin-top: 0.12in; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 19pt; color: var(--amber); line-height: 1.15; }
-  .lede { margin-top: 0.14in; font-size: 12pt; line-height: 1.45; color: rgba(245,248,252,.85); }
-  html[lang="es"] h1 { font-size: 29pt; }
-  .body > div + div { margin-top: 0.16in; }
-  .photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; display: block; }
+  .top { display: flex; align-items: center; justify-content: space-between; padding: 0.28in 0.6in 0.1in; }
+  .top img { height: 0.88in; display: block; margin-left: -0.08in; }
+  .top p { font-size: 9.5pt; color: var(--muted); text-align: right; line-height: 1.35; }
+  .top p b { color: var(--navy); font-weight: 600; }
+  .rule { height: 5px; margin: 0 0.6in; border-radius: 3px; background: linear-gradient(90deg, var(--navy) 0 38%, var(--blue) 38% 100%); }
 
-  .body { flex: 1; padding: 0.36in 0.6in 0.28in; display: flex; flex-direction: column; justify-content: space-between; }
-  .label { font-size: 9.5pt; font-weight: 600; color: var(--cyan-deep); text-transform: uppercase; letter-spacing: .1em; }
+  .hero { display: grid; grid-template-columns: 1fr 4.05in; gap: 0.3in; align-items: center; padding: 0.24in 0.6in 0.04in; }
+  h1 { text-wrap: balance; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30pt; line-height: 1.02; color: var(--navy); }
+  html[lang="es"] h1 { font-size: 27pt; }
+  html[lang="es"] .sub { font-size: 16.5pt; }
+  html[lang="es"] .benefit p { font-size: 10.75pt; }
+  .sub { text-wrap: balance; margin-top: 0.14in; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 17.5pt; color: var(--blue); line-height: 1.15; }
+  .lede { margin-top: 0.12in; font-size: 11.5pt; line-height: 1.45; color: var(--muted); }
+  .photo img { width: 100%; aspect-ratio: 1344 / 752; object-fit: cover; border-radius: 6px; display: block; box-shadow: 0 6px 18px rgba(16,29,83,.18); }
+
+  .body { flex: 1; padding: 0.28in 0.6in 0.3in; display: flex; flex-direction: column; justify-content: space-between; gap: 0.2in; }
+  .label { font-size: 9.5pt; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .1em; }
   .benefits { margin-top: 0.12in; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3in; }
-  .benefit svg { width: 34px; height: 34px; color: var(--cyan-deep); }
-  .benefit h2 { margin-top: 8px; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 16pt; line-height: 1.1; }
-  .benefit p { margin-top: 6px; font-size: 11.5pt; line-height: 1.42; color: rgba(18,32,56,.8); }
+  .benefit svg { width: 28px; height: 28px; color: var(--blue); }
+  .benefit h2 { margin-top: 6px; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15.5pt; line-height: 1.1; color: var(--navy); }
+  .benefit p { margin-top: 5px; font-size: 11pt; line-height: 1.4; color: var(--muted); }
 
   .steps { margin-top: 0.12in; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.2in; }
-  .step { background: var(--paper); border-radius: 4px; padding: 12px 14px; display: flex; gap: 10px; align-items: baseline; }
-  .step b { font-family: 'Barlow Semi Condensed', sans-serif; font-size: 22pt; color: var(--cyan-deep); line-height: 1; }
-  .step span { font-size: 11.5pt; line-height: 1.3; font-weight: 500; }
+  .step { background: var(--sky); border-left: 4px solid var(--blue); border-radius: 4px; padding: 11px 13px; display: flex; gap: 10px; align-items: baseline; }
+  .step b { font-family: 'Barlow Semi Condensed', sans-serif; font-size: 21pt; color: var(--navy); line-height: 1; }
+  .step span { font-size: 11pt; line-height: 1.3; font-weight: 500; }
 
-  .terms { margin-top: 0.12in; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 0.3in; }
-  .terms div { font-size: 12pt; display: flex; gap: 8px; align-items: center; font-weight: 500; }
-  .terms svg { width: 18px; height: 18px; flex-shrink: 0; color: #16a34a; }
+  .terms { margin-top: 0.12in; display: grid; grid-template-columns: 1fr 1fr; gap: 7px 0.3in; }
+  .terms div { font-size: 11.5pt; display: flex; gap: 8px; align-items: center; font-weight: 500; }
+  .terms svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--blue); }
 
-  .cta { background: var(--navy-950); color: #fff; display: grid; grid-template-columns: 1fr auto; gap: 0.3in; align-items: center; padding: 0.24in 0.6in 0.2in; }
+  .cta { background: var(--navy); color: #fff; display: grid; grid-template-columns: 1fr auto; gap: 0.3in; align-items: center; padding: 0.22in 0.6in 0.16in; border-top: 6px solid var(--blue); }
   .cta h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-size: 21pt; line-height: 1.05; }
-  .contact { margin-top: 10px; font-size: 12.5pt; line-height: 1.6; }
-  .contact span { color: var(--cyan); font-weight: 600; display: inline-block; width: 0.8in; }
-  .rep { margin-top: 10px; display: flex; gap: 8px; align-items: end; font-size: 10pt; color: rgba(245,248,252,.7); }
-  .rep i { flex: 1; border-bottom: 1px solid rgba(245,248,252,.45); height: 14px; max-width: 3.4in; }
-  .qr { background: #fff; padding: 8px; border-radius: 4px; width: 1.25in; text-align: center; }
+  .contact { margin-top: 8px; font-size: 12pt; line-height: 1.55; }
+  .contact span { color: #7DB8E8; font-weight: 600; display: inline-block; width: 0.8in; }
+  .rep { margin-top: 10px; display: flex; gap: 8px; align-items: end; font-size: 10pt; color: rgba(255,255,255,.72); }
+  .rep i { flex: 1; border-bottom: 1px solid rgba(255,255,255,.45); height: 14px; max-width: 3.4in; }
+  .qr { background: #fff; padding: 8px; border-radius: 4px; width: 1.12in; text-align: center; }
   .qr img { width: 100%; display: block; }
   .qr span { display: block; margin-top: 4px; font-size: 8pt; color: var(--ink); line-height: 1.2; }
-  .foot { background: var(--navy-950); color: rgba(245,248,252,.5); font-size: 8pt; padding: 0 0.6in 0.2in; }
+  .foot { background: var(--navy); color: rgba(255,255,255,.55); font-size: 8pt; padding: 0 0.6in 0.2in; }
 </style>
 </head>
 <body>
@@ -69,7 +74,8 @@ const ICON = {
 
 const COPY = {
   en: {
-    brand: 'A Universal Insurance Brokers program',
+    brand: 'A program of Universal Insurance Brokers',
+    license: 'Florida agency license #L099044',
     h1: 'An insurance agent inside your dealership.',
     sub: 'Free to your store, and we pay you rent.',
     lede: 'A licensed, bilingual agent at a desk in your store handles the insurance step of every sale.',
@@ -93,13 +99,14 @@ const COPY = {
   },
   es: {
     brand: 'Un programa de Universal Insurance Brokers',
+    license: 'Licencia de agencia en Florida #L099044',
     h1: 'Un agente de seguros dentro de su concesionario.',
     sub: 'Gratis para usted, y le pagamos renta.',
     lede: 'Un agente licenciado y bilingüe, en un escritorio de su concesionario, se encarga del seguro en cada venta.',
     alt: 'Un asesor de seguros revisando la cobertura con clientes en la sala de exhibición de un concesionario',
     what: 'Lo que recibe su concesionario',
     benefits: [
-      ['shield', 'Cada entrega verificada', 'Verificamos con la aseguradora la cobertura de cada cliente antes de la entrega. ¿Sin seguro? Le emitimos una póliza en el momento.'],
+      ['shield', 'Cada entrega verificada', 'Verificamos con la aseguradora la cobertura de cada cliente antes de la entrega. ¿Sin seguro? Emitimos la póliza al momento.'],
       ['wallet', 'Más espacio para F&I', 'Cotizamos gratis el seguro de cada cliente. Cuando baja su pago, ese dinero puede ir a los productos de F&I.'],
       ['chat', 'En español y en inglés', 'Cada cliente resuelve el seguro en su propio idioma, para que la venta siga avanzando.'],
     ],
@@ -121,15 +128,18 @@ const t = COPY[lang];
 document.documentElement.lang = lang;
 document.getElementById('root').innerHTML = `
 <section class="page">
-  <header class="band">
+  <header class="top">
+    <img src="../brand/uds-logo.svg" alt="Universal Dealer Services">
+    <p>${t.brand}<br><b>${t.license}</b></p>
+  </header>
+  <div class="rule"></div>
+  <div class="hero">
     <div>
-      <p class="brand"><b>Universal Dealer Services</b></p>
       <h1>${t.h1}</h1>
       <p class="sub">${t.sub}</p>
-      <p class="lede">${t.lede}</p>
     </div>
-    <div class="photo"><img src="../public/hero-sm.jpg" alt="${t.alt}"></div>
-  </header>
+    <div class="photo"><img src="../public/hero.jpg" alt="${t.alt}"></div>
+  </div>
   <div class="body">
     <div>
       <p class="label">${t.what}</p>
