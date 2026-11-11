@@ -17,8 +17,12 @@ npm run dev
 
 Point `universaldealerservices.com` at the deployment, then add a "Dealer Ventures" link from universalinsurancebroker.com to this site to pass link equity both ways.
 
+## Notes
+
+- **Hero image** lives in `public/hero.jpg` (and `hero-sm.jpg` for phones). It was generated with Higgsfield; the desk sign's Spanish text was corrected from "Segora de Auto" to "Seguro de Auto".
+- **Contact form** (`app/ContactForm.jsx`) posts to FormSubmit using the same inbox alias as universalinsurancebroker.com. FormSubmit activates each site origin once: the first submission from `https://universaldealerservices.com/` sends an "Activate Form" email to the lead inbox, and nothing is delivered until it is clicked.
+- **Sources** for every statistic are listed in the footer. Keep claims tied to a source and have the legal/liability wording reviewed by an attorney before changing it.
+
 ## To do
 
-- [ ] **Localize the hero image**: the hero currently hotlinks a Higgsfield-generated image from its CDN. Download it to `public/hero.jpg` and change the `src` in `app/page.jsx` (Hero section) and the OpenGraph image URL in `app/layout.jsx` to `/hero.jpg` so it never breaks.
 - [ ] Add a Spanish (`/es`) version of the page for bilingual SEO.
-- [ ] Wire the contact section to a form endpoint (currently tel/mailto links).

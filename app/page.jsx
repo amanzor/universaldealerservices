@@ -1,7 +1,10 @@
+import ContactForm from './ContactForm';
+
 const phone = '(239) 204-2208';
 const phoneHref = 'tel:+12392042208';
+const email = 'quotes@universalinsurancebroker.com';
 const emailHref =
-  'mailto:universalinsurancebroker@gmail.com?subject=Dealer%20walkthrough%20request%20%E2%80%94%20Universal%20Dealer%20Services';
+  'mailto:quotes@universalinsurancebroker.com?subject=Dealer%20walkthrough%20request%20%E2%80%94%20Universal%20Dealer%20Services';
 
 function Header() {
   return (
@@ -65,14 +68,19 @@ function Hero() {
             </a>
           </div>
           <p className="hero-reveal hero-reveal-3 mt-6 text-sm text-paper/60">
-            Hablamos español. Serving dealers across Florida from Doral, Boca Raton,
-            and Lehigh Acres.
+            Hablamos español. Serving dealers across Florida from Hialeah, Doral,
+            Boca Raton and Lehigh Acres.
           </p>
         </div>
         <div className="hero-reveal hero-reveal-3 relative">
           <img
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_3KZOsOFTTcGuVNkHbHD4aNfk63r/hf_20261105_145650_c4dfe02e-47a8-44a5-aa8b-c3f52cab9081.png"
-            alt="An insurance agent reviewing coverage with customers inside a dealership showroom"
+            src="/hero.jpg"
+            srcSet="/hero-sm.jpg 672w, /hero.jpg 1344w"
+            sizes="(min-width: 1024px) 34rem, 100vw"
+            width="1344"
+            height="752"
+            fetchPriority="high"
+            alt="A bilingual insurance advisor reviewing coverage with customers inside a dealership showroom"
             className="aspect-[3/2] w-full rounded-sm object-cover shadow-2xl ring-1 ring-white/10"
           />
           <div className="absolute -bottom-4 left-4 rounded-sm bg-white px-4 py-3 shadow-xl">
@@ -96,12 +104,12 @@ const stats = [
   {
     value: '37–53%',
     label: 'Share of total dealership gross profit produced by F&I',
-    note: 'NADA department data',
+    note: 'NADA figures, via Rework',
   },
   {
     value: '70–80%',
     label: 'GAP penetration target on financed deals — most stores sit at 40–50%',
-    note: 'Industry F&I benchmarks',
+    note: 'Industry F&I benchmarks, via Rework',
   },
   {
     value: '$0',
@@ -145,26 +153,21 @@ const bilingualStats = [
   {
     value: '~20%',
     label: 'Hispanic share of new-vehicle purchases nationally — and rising',
-    note: 'NADA, 2026',
+    note: 'NADA data, via Demand Local',
   },
   {
     value: '68%',
     label: 'Share of the auto industry’s sales growth driven by Hispanic buyers',
-    note: 'S&P Global Mobility',
+    note: 'S&P Global Mobility, via AutoProyecto',
   },
   {
     value: '$2.8T',
     label: 'Projected U.S. Hispanic buying power, up from $2.1 trillion',
-    note: 'S&P Global Mobility data',
-  },
-  {
-    value: '52%',
-    label: 'How much less likely Spanish-speaking customers are to respond to English-only outreach',
-    note: 'Industry language-gap data',
+    note: 'S&P Global Mobility, via AutoProyecto',
   },
   {
     value: '+10 cars',
-    label: 'Monthly sales lift one dealer reported immediately after adding a single bilingual salesperson',
+    label: 'Monthly sales lift one dealer reported after adding a single bilingual salesperson',
     note: 'Auto Dealer Today',
   },
 ];
@@ -206,10 +209,9 @@ function Bilingual() {
               What it looks like on your floor
             </p>
             <p className="mt-2 text-paper/75">
-              Dealerships that committed to bilingual teams have doubled their sales
-              to Hispanic customers and led their brand&rsquo;s region doing it. The
-              stores winning this traffic aren&rsquo;t translating — they&rsquo;re
-              staffing. Our agents give you that capability on day one, without a
+              Dealers who built bilingual sales teams report doubling their sales to
+              Hispanic customers. The stores winning this traffic aren&rsquo;t
+              translating — they&rsquo;re staffing. Our agents give you that capability on day one, without a
               single hire.
             </p>
           </div>
@@ -233,7 +235,7 @@ function Bilingual() {
 const exposures = [
   {
     title: 'Spot deliveries',
-    body: 'The customer drives home Friday night on a deal that funds Monday. Until title transfers, that vehicle is still yours — and so is the liability.',
+    body: 'The customer drives home Friday night on a deal that funds Monday. If the deal unwinds or the paperwork is not final, who owned the car — and who answers for it — is exactly what an attorney will test.',
   },
   {
     title: 'Lapsed or false proof of insurance',
@@ -241,7 +243,7 @@ const exposures = [
   },
   {
     title: 'Test drives and dealer plates',
-    body: 'A vehicle operated on your plates with your permission puts your store in the chain of liability the moment something goes wrong.',
+    body: 'A vehicle operated on your plates, with your permission, can put your store in the chain of liability the moment something goes wrong.',
   },
   {
     title: 'State-minimum coverage on a $60,000 vehicle',
@@ -260,11 +262,13 @@ function Exposure() {
           </h2>
           <p className="mt-4 leading-relaxed text-ink/75">
             Under Florida&rsquo;s dangerous instrumentality doctrine, a vehicle&rsquo;s
-            owner can be held strictly liable when someone drives it with permission
-            and hurts somebody. For a dealership, the dangerous window is every moment
-            a customer is behind the wheel before the paperwork, funding, and title
-            are truly done. One uninsured drive-off is all it takes to turn a
-            delivery into a lawsuit.
+            owner can be held liable when someone drives it with permission and hurts
+            somebody. Florida law gives dealers some protections in specific
+            situations, such as loaner vehicles, but those protections generally depend
+            on the driver carrying the required insurance. That makes documented,
+            verified coverage before the keys move one of the best safeguards a store
+            has. One uninsured drive-off is all it takes to turn a delivery into a
+            lawsuit.
           </p>
         </div>
         <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
@@ -345,6 +349,22 @@ function Shield() {
             Every other vendor in your building sends you an invoice. We send a rent
             check.
           </p>
+          <div className="mt-6 border-t border-white/10 pt-5 text-sm leading-relaxed text-paper/70">
+            <p className="font-display text-base font-semibold text-white">
+              How the arrangement works
+            </p>
+            <ul className="mt-2 space-y-2">
+              <li>
+                A flat, fair-market monthly rent for the desk space, never tied to the
+                number of policies written or customers referred.
+              </li>
+              <li>
+                Customers are never required to buy insurance from us to buy a car.
+                They can keep their current carrier; we verify it.
+              </li>
+              <li>Every agent on your floor is a licensed Florida insurance agent.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -470,8 +490,8 @@ function About() {
             A Universal Insurance Brokers program
           </h2>
           <p className="mt-2 text-ink/70">
-            Independent Florida brokerage with offices in Doral, Boca Raton, and
-            Lehigh Acres. Fourteen-plus years in insurance, six in dealership sales —
+            Independent Florida brokerage with offices in Hialeah, Doral, Boca Raton
+            and Lehigh Acres. Fourteen-plus years in insurance, six in dealership sales —
             we&rsquo;ve sat on both sides of the desk. Auto, home, commercial, and
             health, in English and Spanish.
           </p>
@@ -495,9 +515,10 @@ function Contact() {
           Put an agent on your floor. Put rent on your books.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-paper/75">
-          Call or email to schedule a walkthrough and claim the free 90-day delivery
-          audit. Mon–Fri, 9:30 AM – 7:00 PM.
+          Request a walkthrough and claim the free 90-day delivery audit. We reply
+          within one business day. Prefer the phone? Call Mon–Fri, 9:30 AM – 7:00 PM.
         </p>
+        <ContactForm />
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
             href={phoneHref}
@@ -509,13 +530,21 @@ function Contact() {
             href={emailHref}
             className="rounded-sm border border-paper/30 px-7 py-3 font-semibold text-paper hover:border-cyan-brand hover:text-cyan-brand"
           >
-            Email the dealer team
+            {email}
           </a>
         </div>
       </div>
     </section>
   );
 }
+
+const sources = [
+  { label: 'StoneEagle Q1 2026 F&I report — Auto Remarketing', href: 'https://www.autoremarketing.com/subprime/stoneeagle-sees-fi-trends-stay-strong-among-q1-dealer-profits/' },
+  { label: 'F&I per-vehicle-retail and GAP penetration benchmarks — Rework', href: 'https://resources.rework.com/vi/libraries/automotive-sales-growth/fi-per-vehicle-retail' },
+  { label: 'Multicultural marketing statistics for dealerships — Demand Local', href: 'https://www.demandlocal.com/blog/multicultural-marketing-for-dealerships-statistics/' },
+  { label: 'Hispanic buyers and industry growth (S&P Global Mobility) — AutoProyecto', href: 'https://sales.autoproyecto.com/?p=35' },
+  { label: 'Bilingual sales lift at R&R Auto Sales — Auto Dealer Today', href: 'https://www.autodealertodaymagazine.com/308753/sales-skyrocket-with-hispanic-market-focus-rr-auto-sales-thrives-in-orland-calif' },
+];
 
 function Footer() {
   return (
@@ -539,11 +568,23 @@ function Footer() {
         </div>
         <p className="mt-6 max-w-3xl leading-relaxed">
           Universal Dealer Services is a program of Universal Insurance Brokers, an
-          independent Florida insurance brokerage. Doral · Boca Raton · Lehigh Acres.
+          independent Florida insurance brokerage (license #L099044). Hialeah · Doral ·
+          Boca Raton · Lehigh Acres.
           Content on this page is general information about dealership risk and F&I
-          performance, not legal advice. Industry figures reflect published StoneEagle
-          and NADA benchmark data.
+          performance, not legal advice.
         </p>
+        <div className="mt-6">
+          <p className="font-semibold text-paper/75">Sources</p>
+          <ul className="mt-2 space-y-1">
+            {sources.map((src) => (
+              <li key={src.href}>
+                <a href={src.href} className="underline decoration-paper/30 underline-offset-2 hover:text-white" rel="noopener noreferrer" target="_blank">
+                  {src.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
         <p className="mt-4">© 2026 Universal Insurance Brokers. All rights reserved.</p>
       </div>
     </footer>
