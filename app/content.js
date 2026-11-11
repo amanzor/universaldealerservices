@@ -191,6 +191,40 @@ const en = {
     ],
   },
 
+  faq: {
+    title: 'Questions dealers ask',
+    items: [
+      {
+        q: 'What does the program cost my dealership?',
+        a: 'Nothing. Verification, documentation and insurance shopping are free to the store and to your customers. We pay your dealership a flat, fair-market monthly rent for the desk our agent uses.',
+      },
+      {
+        q: 'Do customers have to buy insurance from you?',
+        a: 'No. Buying a car is never tied to buying insurance from us. Customers can keep their current carrier and we verify it. Shopping their coverage is optional and free.',
+      },
+      {
+        q: 'How do you verify a customer’s insurance?',
+        a: 'Our agent confirms with the customer’s carrier that the policy is active and that the coverage fits the deal before the keys move. Each verification is documented so your deal jacket shows the check was done.',
+      },
+      {
+        q: 'What happens when a customer shows up without insurance?',
+        a: 'The agent can quote the customer across many carriers and bind a policy the same day, so the deal can close instead of waiting on a phone call.',
+      },
+      {
+        q: 'How is this different from insurance verification software?',
+        a: 'Verification software is usually a monthly subscription that sends the customer a link. Our program puts a licensed person on your floor who verifies coverage, fixes problems on the spot, works in English or Spanish and shops the customer’s insurance, at no cost to the store.',
+      },
+      {
+        q: 'Are your agents licensed?',
+        a: 'Yes. Every agent on your floor is a licensed Florida insurance agent with Universal Insurance Brokers (agency license #L099044).',
+      },
+      {
+        q: 'How do we get started?',
+        a: 'Book a 30-minute walkthrough. We start with a free review of your last 90 days of deliveries, then a 60-day pilot at one rooftop with rent paid from day one.',
+      },
+    ],
+  },
+
   about: {
     title: 'A Universal Insurance Brokers program',
     body: 'Independent Florida brokerage with offices in Hialeah, Doral, Boca Raton and Lehigh Acres. 10+ years in insurance, six in dealership sales — we’ve sat on both sides of the desk. Auto, home, commercial, and health, in English and Spanish.',
@@ -426,6 +460,40 @@ const es = {
       {
         title: 'Expansión al grupo',
         body: 'Usted presenta los datos del piloto a su grupo. Llevamos agentes a sus demás concesionarios en los términos que se ganaron los números.',
+      },
+    ],
+  },
+
+  faq: {
+    title: 'Preguntas de los concesionarios',
+    items: [
+      {
+        q: '¿Cuánto le cuesta el programa a mi concesionario?',
+        a: 'Nada. La verificación, la documentación y la cotización de seguros son gratis para el concesionario y para sus clientes. Nosotros le pagamos una renta mensual fija, a precio justo de mercado, por el escritorio que usa nuestro agente.',
+      },
+      {
+        q: '¿Los clientes tienen que comprarles el seguro a ustedes?',
+        a: 'No. Comprar un auto nunca depende de comprarnos un seguro. El cliente puede quedarse con su aseguradora actual y nosotros la verificamos. Cotizar su seguro es opcional y gratis.',
+      },
+      {
+        q: '¿Cómo verifican el seguro del cliente?',
+        a: 'Nuestro agente confirma con la aseguradora del cliente que la póliza está activa y que la cobertura corresponde a la venta antes de entregar las llaves. Cada verificación queda documentada en el expediente de la venta.',
+      },
+      {
+        q: '¿Qué pasa si un cliente llega sin seguro?',
+        a: 'El agente puede cotizarle con muchas aseguradoras y emitir una póliza el mismo día, para que la venta se cierre en vez de esperar una llamada.',
+      },
+      {
+        q: '¿En qué se diferencia de un software de verificación de seguros?',
+        a: 'Un software de verificación suele ser una suscripción mensual que le manda un enlace al cliente. Nuestro programa pone en su piso de ventas a una persona licenciada que verifica la cobertura, resuelve problemas en el momento, atiende en español o en inglés y cotiza el seguro del cliente, sin costo para el concesionario.',
+      },
+      {
+        q: '¿Sus agentes tienen licencia?',
+        a: 'Sí. Cada agente en su piso de ventas es un agente de seguros con licencia en Florida de Universal Insurance Brokers (licencia de agencia #L099044).',
+      },
+      {
+        q: '¿Cómo empezamos?',
+        a: 'Agende una visita de 30 minutos. Empezamos con una revisión gratuita de sus últimos 90 días de entregas y luego un piloto de 60 días en un concesionario, con renta pagada desde el primer día.',
       },
     ],
   },

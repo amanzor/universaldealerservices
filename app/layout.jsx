@@ -11,7 +11,10 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'InsuranceAgency',
+  '@id': `${siteUrl}/#organization`,
   name: 'Universal Dealer Services',
+  logo: `${siteUrl}/icon.png`,
+  image: `${siteUrl}/hero.jpg`,
   parentOrganization: {
     '@type': 'InsuranceAgency',
     name: 'Universal Insurance Brokers',

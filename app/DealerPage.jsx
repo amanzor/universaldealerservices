@@ -1,5 +1,6 @@
 import ContactForm from './ContactForm';
 import { content, email, onePagerHref, phone, phoneHref } from './content';
+import { pageMetadata, siteUrl } from './seo';
 
 const ledgerGrid = 'ledger-row grid gap-2 py-5 sm:grid-cols-[10rem_1fr_auto] sm:items-baseline sm:gap-6';
 
@@ -266,6 +267,83 @@ function Pilot({ t }) {
   );
 }
 
+function Faq({ t }) {
+  return (
+    <section id="faq" className="bg-navy-900 py-16 lg:py-20">
+      <div className="mx-auto max-w-site px-5">
+        <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">{t.faq.title}</h2>
+        <div className="mt-8 divide-y divide-white/10 border-y border-white/10">
+          {t.faq.items.map((item) => (
+            <details key={item.q} className="group py-5">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-display text-lg font-semibold text-white marker:hidden">
+                <h3>{item.q}</h3>
+                <span aria-hidden="true" className="mt-1 text-cyan-brand transition group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-3 max-w-3xl leading-relaxed text-paper/75">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Page-level structured data: the service itself and the FAQ, in this page's language.
+// The InsuranceAgency (#organization) is declared once in app/layout.jsx.
+function PageJsonLd({ t }) {
+  const url = `${siteUrl}${t.home}`;
+  const inLanguage = t.lang === 'es' ? 'es-US' : 'en-US';
+  const meta = pageMetadata[t.lang];
+  const data = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: 'Universal Dealer Services',
+      inLanguage: ['en-US', 'es-US'],
+      publisher: { '@id': `${siteUrl}/#organization` },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: meta.title,
+      description: meta.description,
+      inLanguage,
+      isPartOf: { '@id': `${siteUrl}/#website` },
+      about: { '@id': `${siteUrl}/#service` },
+      primaryImageOfPage: `${siteUrl}/hero.jpg`,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `${siteUrl}/#service`,
+      name: t.lang === 'es' ? 'Verificación de seguros en el concesionario' : 'In-dealership insurance verification',
+      serviceType: t.lang === 'es' ? 'Verificación de seguros para concesionarios' : 'Dealership insurance verification',
+      description: meta.description,
+      provider: { '@id': `${siteUrl}/#organization` },
+      areaServed: { '@type': 'State', name: 'Florida' },
+      availableLanguage: ['English', 'Spanish'],
+      audience: { '@type': 'BusinessAudience', audienceType: t.lang === 'es' ? 'Concesionarios de autos' : 'Auto dealerships' },
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      inLanguage,
+      mainEntity: t.faq.items.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    },
+  ];
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
 function About({ t }) {
   return (
     <section className="border-y border-ink/10 bg-paper py-12 text-ink">
@@ -373,6 +451,7 @@ export default function DealerPage({ lang }) {
   const emailHref = `mailto:${email}?subject=${encodeURIComponent(t.emailSubject)}`;
   return (
     <main lang={lang}>
+      <PageJsonLd t={t} />
       <Header t={t} />
       <Hero t={t} />
       <Numbers t={t} />
@@ -381,6 +460,7 @@ export default function DealerPage({ lang }) {
       <Exposure t={t} />
       <Shield t={t} />
       <Pilot t={t} />
+      <Faq t={t} />
       <About t={t} />
       <Contact t={t} emailHref={emailHref} />
       <Footer t={t} emailHref={emailHref} />
