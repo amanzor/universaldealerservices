@@ -1,44 +1,10 @@
 import './globals.css';
 
-const siteUrl = 'https://universaldealerservices.com';
+import { siteUrl } from './seo';
 
+// Page-level title, description, hreflang and Open Graph live in app/seo.js.
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Universal Dealer Services | On-Site Insurance Verification for Auto Dealers',
-  description:
-    'Licensed, bilingual insurance agents inside your Florida dealership shop every customer across any carrier at delivery — free. Savings go back into the monthly budget your F&I office sells against, Spanish-first buyers close faster, and we pay your store rent.',
-  keywords: [
-    'auto dealer insurance verification',
-    'dealership insurance compliance Florida',
-    'F&I product penetration',
-    'in-dealership insurance agent',
-    'spot delivery insurance verification',
-    'dealer liability uninsured driver Florida',
-    'Universal Insurance Brokers',
-  ],
-  alternates: { canonical: siteUrl },
-  openGraph: {
-    type: 'website',
-    url: siteUrl,
-    siteName: 'Universal Dealer Services',
-    title: 'Unlock your back-end budget — in English and Spanish.',
-    description:
-      'On-site, bilingual insurance shopping at delivery frees monthly budget your F&I office recaptures. Zero cost to the dealership — we pay rent. A Universal Insurance Brokers program.',
-    images: [
-      {
-        url: '/hero.jpg',
-        width: 1344,
-        height: 752,
-        alt: 'Insurance agent serving clients inside a dealership showroom',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Universal Dealer Services',
-    description:
-      'On-site insurance verification for every delivery. Zero cost — we pay your dealership rent.',
-  },
   robots: { index: true, follow: true },
 };
 
