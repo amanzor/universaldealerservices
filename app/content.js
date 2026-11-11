@@ -7,8 +7,6 @@
 export const phone = '(239) 204-2208';
 export const phoneHref = 'tel:+12392042208';
 export const email = 'quotes@universalinsurancebroker.com';
-// Two-sided leave-behind (page 1 English, page 2 Spanish). Rebuild with scripts/build-leave-behind.mjs.
-export const onePagerHref = '/universal-dealer-services-one-pager.pdf';
 
 const sourceLinks = {
   stoneeagle: 'https://www.autoremarketing.com/subprime/stoneeagle-sees-fi-trends-stay-strong-among-q1-dealer-profits/',
@@ -235,7 +233,8 @@ const en = {
     title: 'Put an agent on your floor. Put rent on your books.',
     body: 'Request a walkthrough and claim the free 90-day delivery audit. We reply within one business day. Prefer the phone? Call Mon–Fri, 9:30 AM – 7:00 PM.',
     call: `Call ${phone}`,
-    pdf: 'Download the one-page summary (PDF, English and Spanish)',
+    pdf: 'Download the one-page summary (PDF)',
+    pdfHref: '/universal-dealer-services-one-pager.pdf',
   },
 
   footer: {
@@ -508,7 +507,8 @@ const es = {
     title: 'Ponga un agente en su piso de ventas. Ponga renta en sus libros.',
     body: 'Solicite una visita y reciba la auditoría gratuita de 90 días de entregas. Respondemos en un día hábil. ¿Prefiere llamar? Lunes a viernes, de 9:30 AM a 7:00 PM.',
     call: `Llame al ${phone}`,
-    pdf: 'Descargue el resumen de una página (PDF, en español e inglés)',
+    pdf: 'Descargue el resumen de una página (PDF)',
+    pdfHref: '/universal-dealer-services-one-pager-es.pdf',
   },
 
   footer: {
