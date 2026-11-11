@@ -25,6 +25,8 @@ Point `universaldealerservices.com` at the deployment, then add a "Dealer Ventur
 
 - **Two languages:** all copy lives in `app/content.js` (`en` and `es`); `app/DealerPage.jsx` is the shared layout. Change a claim, number or source in both languages. `npm run build` runs `scripts/set-es-lang.mjs`, which marks `out/es/` pages as `lang="es"`. Page titles, descriptions and hreflang live in `app/seo.js`; `app/sitemap.js` and `app/robots.js` generate `sitemap.xml` and `robots.txt`.
 
+- **Leave-behind:** `print/leave-behind.html` is a two-sided, letter-size one-pager (front English, back Spanish) with QR codes to `/` and `/es/`. Run `node scripts/build-leave-behind.mjs` (needs Playwright with Chromium) to rebuild `public/universal-dealer-services-one-pager.pdf`; the script refuses to write a PDF if either side overflows the page. The site links to it from the contact section. Keep its copy and sources in step with `app/content.js`.
+
 ## To do
 
 - [x] Spanish version at `/es/` (hreflang, sitemap, `lang="es"`).

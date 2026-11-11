@@ -1,5 +1,5 @@
 import ContactForm from './ContactForm';
-import { content, email, phone, phoneHref } from './content';
+import { content, email, onePagerHref, phone, phoneHref } from './content';
 
 const ledgerGrid = 'ledger-row grid gap-2 py-5 sm:grid-cols-[10rem_1fr_auto] sm:items-baseline sm:gap-6';
 
@@ -308,6 +308,15 @@ function Contact({ t, emailHref }) {
             {email}
           </a>
         </div>
+        <p className="mt-6 text-sm">
+          <a
+            href={onePagerHref}
+            download
+            className="text-paper/70 underline decoration-paper/30 underline-offset-4 hover:text-white"
+          >
+            {t.contact.pdf}
+          </a>
+        </p>
       </div>
     </section>
   );
