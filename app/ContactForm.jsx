@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { track } from './analytics';
 
 /*
  * Walkthrough request form. Submissions are relayed by FormSubmit to the
@@ -48,6 +49,7 @@ export default function ContactForm({ lang, strings: f }) {
       const json = await res.json().catch(() => null);
       if (res.ok && (json?.success === true || json?.success === 'true')) {
         setStatus('sent');
+        track('generate_lead', { form_name: 'dealer_walkthrough', rooftops: data.rooftops, site_language: lang });
         form.reset();
       } else {
         setStatus('error');
