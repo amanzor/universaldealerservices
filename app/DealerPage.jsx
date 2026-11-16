@@ -89,19 +89,26 @@ function Hero({ t }) {
           <p className="hero-reveal hero-reveal-3 mt-6 text-sm text-paper/60">{h.note}</p>
         </div>
         <div className="hero-reveal hero-reveal-3 relative">
-          <img
-            src="/hero.jpg"
-            srcSet="/hero-sm.jpg 672w, /hero.jpg 1344w"
-            sizes="(min-width: 1024px) 34rem, 100vw"
-            width="1344"
-            height="752"
-            fetchPriority="high"
-            alt={h.imageAlt}
-            className="aspect-[3/2] w-full rounded-sm object-cover shadow-2xl ring-1 ring-white/10"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/hero-sm.webp 672w, /hero-md.webp 960w, /hero.webp 1344w"
+              sizes="(min-width: 1024px) 34rem, 100vw"
+            />
+            <img
+              src="/hero.jpg"
+              srcSet="/hero-sm.jpg 672w, /hero-md.jpg 960w, /hero.jpg 1344w"
+              sizes="(min-width: 1024px) 34rem, 100vw"
+              width="1344"
+              height="752"
+              fetchPriority="high"
+              alt={h.imageAlt}
+              className="aspect-[3/2] w-full rounded-sm object-cover shadow-2xl ring-1 ring-white/10"
+            />
+          </picture>
           <div className="absolute -bottom-4 left-4 rounded-sm bg-white px-4 py-3 shadow-xl">
             <p className="font-display text-sm font-semibold text-ink">{h.badgeTitle}</p>
-            <p className="text-xs text-ink/60">{h.badgeBody}</p>
+            <p className="text-xs text-ink/70">{h.badgeBody}</p>
           </div>
         </div>
       </div>
@@ -203,7 +210,7 @@ function Exposure({ t }) {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-sm text-ink/50">{x.disclaimer}</p>
+        <p className="mt-10 text-sm text-ink/70">{x.disclaimer}</p>
       </div>
     </section>
   );

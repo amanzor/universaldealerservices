@@ -1,4 +1,5 @@
 import './globals.css';
+import { Barlow, Barlow_Semi_Condensed } from 'next/font/google';
 import Analytics from './Analytics';
 
 import { siteUrl } from './seo';
@@ -8,6 +9,11 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   robots: { index: true, follow: true },
 };
+
+// Fonts are downloaded at build time and served from this site, so the first
+// paint doesn't wait on a Google Fonts request.
+const body = Barlow({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-body', display: 'swap', preload: false });
+const display = Barlow_Semi_Condensed({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-display', display: 'swap' });
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -38,15 +44,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${body.variable} ${display.variable}`}>
       <body>
         <script
           type="application/ld+json"
