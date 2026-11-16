@@ -10,12 +10,16 @@ const ledgerGrid = 'ledger-row grid gap-2 py-5 sm:grid-cols-[10rem_1fr_auto] sm:
 export function Header({ t, base = '', switchHref }) {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy-900/95 backdrop-blur">
-      <div className="mx-auto flex max-w-site items-center justify-between gap-3 px-5 py-3">
-        <a href={base ? base : '#top'} className="flex items-baseline gap-2">
-          <span className="whitespace-nowrap font-display text-xl font-bold tracking-tight text-white">
-            Universal Dealer Services
-          </span>
-          <span className="hidden text-xs text-paper/60 sm:inline lg:hidden xl:inline">{t.header.byline}</span>
+      <div className="mx-auto flex max-w-site items-center justify-between gap-3 px-5 py-2.5">
+        <a href={base ? base : '#top'} className="flex shrink-0 items-center gap-3">
+          <img
+            src="/logo-white.svg"
+            alt="Universal Dealer Services"
+            width="121"
+            height="50"
+            className="h-[46px] w-auto sm:h-[52px]"
+          />
+          <span className="hidden max-w-[7rem] text-xs leading-snug text-paper/60 sm:inline lg:hidden xl:inline">{t.header.byline}</span>
         </a>
         <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-paper/80 lg:flex xl:gap-7">
           {t.header.nav.map(([href, label]) => (
@@ -437,7 +441,7 @@ export function Footer({ t, emailHref, switchHref }) {
     <footer className="border-t border-white/10 bg-navy-950 py-10">
       <div className="mx-auto max-w-site px-5 text-sm text-paper/55">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="font-display text-base font-semibold text-paper/80">Universal Dealer Services</p>
+          <img src="/logo-white.svg" alt="Universal Dealer Services" width="121" height="50" className="h-14 w-auto opacity-90" loading="lazy" />
           <nav className="flex flex-wrap gap-6">
             <a href={t.uibUrl} className="hover:text-white">
               Universal Insurance Brokers
