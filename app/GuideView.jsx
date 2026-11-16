@@ -162,7 +162,7 @@ export function GuideView({ guide, lang }) {
       <article className="bg-paper py-12 text-ink lg:py-16">
         <div className="mx-auto max-w-3xl px-5">
           <Blocks blocks={c.blocks} />
-          <p className="mt-12 border-t border-ink/15 pt-6 text-sm leading-relaxed text-ink/60">{c.disclaimer}</p>
+          <p className="mt-12 border-t border-ink/15 pt-6 text-sm leading-relaxed text-ink/70">{c.disclaimer}</p>
           <h2 className="mt-8 font-display text-lg font-semibold">{g.sources}</h2>
           <ul className="mt-2 space-y-1 text-sm">
             {c.sources.map((s) => (

@@ -4,8 +4,6 @@
 
 :root {
   color-scheme: light;
-  --font-display: 'Barlow Semi Condensed';
-  --font-body: 'Barlow';
 }
 
 html {
@@ -29,9 +27,7 @@ body {
 
 /* Single orchestrated page-load moment: the hero reveals once. */
 .hero-reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: heroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: heroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero-reveal-2 {
   animation-delay: 0.15s;
@@ -40,6 +36,10 @@ body {
   animation-delay: 0.3s;
 }
 @keyframes heroIn {
+  from {
+    opacity: 0.35;
+    transform: translateY(14px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);

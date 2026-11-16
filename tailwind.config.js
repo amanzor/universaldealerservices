@@ -14,7 +14,7 @@ module.exports = {
         ink: '#122038',
         cyan: {
           brand: '#19B8E8',
-          deep: '#0E8FB8',
+          deep: '#0A7499',
         },
         amber: {
           rent: '#E8A33D',
