@@ -10,7 +10,7 @@
  * languages saying the same thing.
  */
 
-export const REVIEWED = { en: 'November 2026', es: 'noviembre de 2026', iso: '2026-11-11' };
+export const REVIEWED = { en: 'November 2026', es: 'noviembre de 2026', iso: '2026-11-16' };
 
 const SRC = {
   flhsmvInsurance: { label: 'FLHSMV: Insurance requirements', href: 'https://www.flhsmv.gov/insurance/' },
@@ -44,6 +44,12 @@ const SRC = {
     href: 'https://www.demandlocal.com/blog/multicultural-marketing-for-dealerships-statistics/',
   },
   autoproyecto: { label: 'AutoProyecto: Hispanic buyers and industry growth (S&P Global Mobility)', href: 'https://sales.autoproyecto.com/?p=35' },
+  cfpbForcePlaced: { label: 'CFPB: What is force-placed insurance?', href: 'https://www.consumerfinance.gov/ask-cfpb/what-is-force-placed-insurance-en-827/' },
+  cfpbFinancing: {
+    label: 'CFPB: Auto insurance options when financing a car',
+    href: 'https://www.consumerfinance.gov/ask-cfpb/what-kind-of-auto-insurance-options-are-available-when-financing-a-car-en-731/',
+  },
+  cfpbFifthThird: { label: 'CFPB enforcement action: Fifth Third Bank, force-placed insurance (2024)', href: 'https://www.consumerfinance.gov/enforcement/actions/fifth-third-bank-na-fpi-2024/' },
 };
 
 export const GUIDES = [
@@ -516,6 +522,260 @@ export const GUIDES = [
       sources: [SRC.demandLocal, SRC.autoproyecto, SRC.flhsmvInsurance, SRC.rs36, SRC.fs626112],
     },
   },
+  /* ------------------------------------------------------------------ */
+  {
+    key: 'uninsured',
+    en: {
+      slug: 'customer-no-insurance-at-delivery',
+      title: 'Customer Has No Insurance at Delivery? What Florida Dealers Can Do',
+      short: 'Customer has no insurance at delivery',
+      description:
+        'When a Florida buyer has no insurance at delivery: why the car can’t leave without it, the common situations, same-day fixes and what not to do at the desk.',
+      lede: 'It happens every week. The deal is signed, the car is detailed, and the buyer has no active policy, an expired card, or coverage on the car they just traded in. Here is how to handle it without losing the deal or taking on the risk.',
+      blocks: [
+        { h: 'Why the car can’t leave without coverage' },
+        {
+          p: 'Florida requires at least $10,000 of Personal Injury Protection (PIP) and $10,000 of Property Damage Liability (PDL) to register a vehicle, and FLHSMV procedures require proof of insurance before a registration or temporary tag is issued. A financed car usually also needs the comprehensive and collision coverage the lender asks for.',
+        },
+        {
+          p: 'Paperwork aside, a car that leaves uninsured can put the dealership’s name on whatever happens next, especially on a spot delivery, where financing, and sometimes ownership, is not final yet.',
+        },
+        { h: 'The usual situations and what to check' },
+        {
+          table: {
+            head: ['Situation', 'What to check', 'Typical fix'],
+            rows: [
+              ['No policy at all', 'Nothing to verify', 'A new policy from a licensed agent, with a binder or ID card, before the keys move'],
+              ['Policy is on the trade-in', 'Whether the policy covers a replacement vehicle, and the deadline to report it', 'The carrier adds the new VIN and sends an updated ID card'],
+              ['Card is expired or the policy was cancelled', 'Status with the carrier, not the date on the card', 'Reinstate the policy or write a new one'],
+              ['Coverage is too thin for the lender', 'Comprehensive, collision, deductible, loss payee', 'Add the coverages and list the lender'],
+              ['Policy is in someone else’s name', 'Who will own and register the car, and who is on the policy', 'Usually a policy in the buyer’s name'],
+            ],
+          },
+        },
+        { h: 'The “my new car is automatically covered” assumption' },
+        {
+          p: 'Many personal auto policies extend coverage to a newly acquired or replacement vehicle for a short time, but only if the insurer is told within the deadline in the policy. Policy forms commonly use 14 or 30 days, and Florida courts enforce what the policy says, so a buyer who reports late can be left with no coverage at all.',
+        },
+        {
+          p: 'Even when the grace period applies, it doesn’t give the tag agency or the lender what they need: proof that shows the new vehicle.',
+        },
+        {
+          note: 'Treat “my policy covers it” as a call to make, not an answer. Get the carrier on the phone and finish the deal with an ID card or binder that shows the new VIN.',
+        },
+        { h: 'Same-day fixes, in order' },
+        {
+          ol: [
+            'Update the buyer’s existing policy: the carrier adds the new VIN, and the lender as loss payee, and sends an updated ID card.',
+            'Write a new policy at the desk through a licensed agent, with a binder (good for up to 60 days in Florida) or an ID card.',
+            'If neither can happen today, keep the car until it can. A delivery that waits a few hours costs less than an uninsured one.',
+          ],
+        },
+        { h: 'What not to do' },
+        {
+          ul: [
+            'Don’t let an unlicensed salesperson or F&I manager quote or sell insurance. Florida requires a license to solicit insurance.',
+            'Don’t accept a photo of an old card, or a card for a different vehicle, as proof.',
+            'Don’t release the car on a promise to “send the card later.”',
+            'Don’t tell the customer which insurer to use. They can buy from anyone; what matters is that the coverage is in place.',
+          ],
+        },
+        { h: 'How Universal Dealer Services helps' },
+        {
+          p: 'Our licensed, bilingual agent works from a desk in your store. The agent checks coverage with the carrier, gets the new VIN added to an existing policy, and writes a new policy the same day when the buyer has none. Customers are free to use any insurer. It costs your dealership nothing, and we pay you rent for the desk.',
+        },
+      ],
+      disclaimer:
+        'General information, not legal advice. What a policy covers, including any newly acquired vehicle period, depends on the policy itself. Florida requirements are from FLHSMV as of November 2026.',
+      sources: [SRC.flhsmvInsurance, SRC.rs36, SRC.rs31, SRC.fs626112, SRC.fallsLake],
+    },
+    es: {
+      slug: 'cliente-sin-seguro-en-la-entrega',
+      title: '¿Cliente sin seguro en la entrega? Qué puede hacer un concesionario en Florida',
+      short: 'Cliente sin seguro en la entrega',
+      description:
+        'Cuando un comprador en Florida no tiene seguro en la entrega: por qué el auto no puede salir sin él, las situaciones comunes y cómo resolverlo el mismo día.',
+      lede: 'Pasa todas las semanas. El contrato está firmado, el auto está listo y el comprador no tiene una póliza activa, trae una tarjeta vencida o tiene el seguro en el auto que acaba de dar en parte de pago. Así se resuelve sin perder la venta ni asumir el riesgo.',
+      blocks: [
+        { h: 'Por qué el auto no puede salir sin cobertura' },
+        {
+          p: 'Florida exige al menos $10,000 de Protección contra Lesiones Personales (PIP) y $10,000 de Responsabilidad por Daños a la Propiedad (PDL) para registrar un vehículo, y los procedimientos del FLHSMV exigen comprobante de seguro antes de emitir el registro o la placa temporal. Un auto financiado normalmente también necesita la cobertura amplia y de choque que pide el prestamista.',
+        },
+        {
+          p: 'Además del papeleo, un auto que sale sin seguro puede poner el nombre del concesionario en lo que pase después, sobre todo en una entrega inmediata, cuando el financiamiento, y a veces la propiedad, todavía no es definitivo.',
+        },
+        { h: 'Las situaciones comunes y qué verificar' },
+        {
+          table: {
+            head: ['Situación', 'Qué verificar', 'Solución habitual'],
+            rows: [
+              ['No tiene póliza', 'No hay nada que verificar', 'Una póliza nueva con un agente licenciado, con binder o tarjeta, antes de entregar las llaves'],
+              ['La póliza está en el auto que entrega', 'Si la póliza cubre un vehículo de reemplazo y el plazo para reportarlo', 'La aseguradora agrega el nuevo VIN y envía una tarjeta actualizada'],
+              ['La tarjeta está vencida o la póliza fue cancelada', 'El estado con la aseguradora, no la fecha de la tarjeta', 'Reactivar la póliza o emitir una nueva'],
+              ['La cobertura no alcanza para el prestamista', 'Cobertura amplia, choque, deducible, beneficiario de pérdida', 'Agregar las coberturas y poner al prestamista'],
+              ['La póliza está a nombre de otra persona', 'Quién será dueño del auto y lo registrará, y quién está en la póliza', 'Normalmente, una póliza a nombre del comprador'],
+            ],
+          },
+        },
+        { h: 'La idea de que “mi auto nuevo queda cubierto automáticamente”' },
+        {
+          p: 'Muchas pólizas personales extienden la cobertura a un vehículo recién adquirido o de reemplazo por un tiempo corto, pero solo si se avisa a la aseguradora dentro del plazo que dice la póliza. Es común que sea de 14 o 30 días, y los tribunales de Florida aplican lo que dice la póliza: un comprador que avisa tarde puede quedarse sin cobertura.',
+        },
+        {
+          p: 'Aun cuando ese plazo aplica, no le da a la oficina de placas ni al prestamista lo que necesitan: un comprobante que muestre el vehículo nuevo.',
+        },
+        {
+          note: 'Tome “mi póliza lo cubre” como una llamada que hay que hacer, no como una respuesta. Llame a la aseguradora y cierre la venta con una tarjeta o binder que muestre el nuevo VIN.',
+        },
+        { h: 'Soluciones el mismo día, en orden' },
+        {
+          ol: [
+            'Actualizar la póliza que ya tiene el comprador: la aseguradora agrega el nuevo VIN, y al prestamista como beneficiario de pérdida, y envía una tarjeta actualizada.',
+            'Emitir una póliza nueva en el escritorio con un agente licenciado, con un binder (válido hasta 60 días en Florida) o una tarjeta.',
+            'Si ninguna de las dos se puede hacer hoy, el auto se queda hasta que se pueda. Una entrega que espera unas horas cuesta menos que una sin seguro.',
+          ],
+        },
+        { h: 'Lo que no se debe hacer' },
+        {
+          ul: [
+            'No deje que un vendedor o gerente de F&I sin licencia cotice o venda seguros. En Florida, ofrecer seguros requiere licencia.',
+            'No acepte como comprobante la foto de una tarjeta vieja ni la tarjeta de otro vehículo.',
+            'No entregue el auto con la promesa de “mandar la tarjeta después”.',
+            'No le diga al cliente con qué aseguradora comprar. Puede comprar con quien quiera; lo importante es que la cobertura esté vigente.',
+          ],
+        },
+        { h: 'Cómo ayuda Universal Dealer Services' },
+        {
+          p: 'Nuestro agente licenciado y bilingüe trabaja desde un escritorio en su concesionario. Verifica la cobertura con la aseguradora, hace que se agregue el nuevo VIN a una póliza existente y emite una póliza nueva el mismo día cuando el comprador no tiene. El cliente puede usar cualquier aseguradora. A su concesionario no le cuesta nada, y le pagamos renta por el escritorio.',
+        },
+      ],
+      disclaimer:
+        'Información general, no asesoría legal. Lo que cubre una póliza, incluido cualquier plazo para vehículos recién adquiridos, depende de la póliza. Los requisitos de Florida son del FLHSMV a noviembre de 2026.',
+      sources: [SRC.flhsmvInsurance, SRC.rs36, SRC.rs31, SRC.fs626112, SRC.fallsLake],
+    },
+  },
+  /* ------------------------------------------------------------------ */
+  {
+    key: 'lender',
+    en: {
+      slug: 'lender-insurance-requirements-financed-cars',
+      title: 'Lender Insurance Requirements on Financed Cars: A Checklist for F&I',
+      short: 'Lender insurance requirements',
+      description:
+        'What auto lenders usually require before funding (comprehensive, collision, a deductible limit, the lender as loss payee) and what happens when coverage lapses.',
+      lede: 'The state minimum gets a car registered. The lender’s requirements get the deal funded. When the two don’t match, deals sit in contracts-in-transit, or the buyer gets hit months later with lender-placed insurance.',
+      blocks: [
+        { h: 'State minimum vs. what lenders usually require' },
+        {
+          table: {
+            head: ['Coverage', 'Florida registration minimum', 'Typical lender requirement'],
+            rows: [
+              ['Personal Injury Protection (PIP)', '$10,000', 'Same, because the state requires it'],
+              ['Property Damage Liability (PDL)', '$10,000', 'Same, because the state requires it'],
+              ['Comprehensive', 'Not required', 'Required'],
+              ['Collision', 'Not required', 'Required'],
+              ['Deductible', 'Not applicable', 'Often capped; check the lender’s limit'],
+              ['Lender named on the policy', 'Not applicable', 'Listed as loss payee; leasing companies often also ask to be additional insured'],
+            ],
+          },
+        },
+        {
+          p: 'The exact rules are in each lender’s funding instructions and in the retail installment contract, and they differ from lender to lender. Check them on every deal instead of relying on a general rule.',
+        },
+        { h: 'Checklist before you send the deal' },
+        {
+          ul: [
+            'The policy is active on the delivery date and shows the new vehicle’s VIN.',
+            'Comprehensive and collision are on this vehicle, not just liability.',
+            'Deductibles are within the lender’s limit.',
+            'The lender’s exact name and address are listed as loss payee.',
+            'The named insured matches the buyer, and the co-buyer if the lender requires it.',
+            'The proof is a document the lender accepts: ID card, binder or declarations page.',
+          ],
+        },
+        { h: 'What happens when the buyer’s coverage lapses' },
+        {
+          p: 'Most auto finance contracts require the buyer to keep insurance on the car. If it lapses, the contract usually lets the lender buy coverage on the vehicle and charge the buyer for it. The Consumer Financial Protection Bureau calls this force-placed insurance; lenders often call it collateral protection insurance (CPI).',
+        },
+        {
+          p: 'According to the CFPB, force-placed insurance protects only the lender, not the driver, and it is usually much more expensive than a policy the buyer could buy on their own. For the buyer, that means a higher payment and no liability protection. For the lender, it’s a loan that just got riskier.',
+        },
+        {
+          note: 'A buyer who leaves with the right coverage at a price they can keep paying is a better loan for everyone. That’s worth five minutes at the desk.',
+        },
+        { h: 'Where GAP fits' },
+        {
+          p: 'GAP covers some or all of the difference between what the car is worth and what is still owed on the loan after a total loss. It works alongside the buyer’s own physical-damage coverage, not instead of it, so check the GAP contract’s terms before telling a customer what it pays.',
+        },
+        { h: 'How Universal Dealer Services helps' },
+        {
+          p: 'Our licensed agent checks each buyer’s policy against the lender’s requirements before delivery, adds comprehensive, collision and the loss payee when they’re missing, and shops carriers so full coverage fits the buyer’s budget. Customers can choose any insurer. There’s no cost to your dealership, and we pay you rent for the desk.',
+        },
+      ],
+      disclaimer:
+        'General information, not legal advice. Lender requirements vary; follow each lender’s funding instructions. Florida minimums are from FLHSMV as of November 2026.',
+      sources: [SRC.cfpbForcePlaced, SRC.cfpbFinancing, SRC.cfpbFifthThird, SRC.flhsmvInsurance],
+    },
+    es: {
+      slug: 'requisitos-de-seguro-del-prestamista',
+      title: 'Requisitos de seguro del prestamista en autos financiados: lista para F&I',
+      short: 'Requisitos de seguro del prestamista',
+      description:
+        'Lo que suelen exigir los prestamistas antes de fondear (cobertura amplia, choque, un límite de deducible, el prestamista como beneficiario) y qué pasa si el seguro vence.',
+      lede: 'El mínimo del estado permite registrar el auto. Los requisitos del prestamista permiten fondear la venta. Cuando no coinciden, el contrato se queda detenido, o meses después el comprador recibe un cargo por un seguro que puso el prestamista.',
+      blocks: [
+        { h: 'Mínimo del estado vs. lo que suelen exigir los prestamistas' },
+        {
+          table: {
+            head: ['Cobertura', 'Mínimo para registrar en Florida', 'Requisito habitual del prestamista'],
+            rows: [
+              ['Protección contra Lesiones Personales (PIP)', '$10,000', 'Igual, porque lo exige el estado'],
+              ['Responsabilidad por Daños a la Propiedad (PDL)', '$10,000', 'Igual, porque lo exige el estado'],
+              ['Cobertura amplia (comprehensive)', 'No se exige', 'Se exige'],
+              ['Choque (collision)', 'No se exige', 'Se exige'],
+              ['Deducible', 'No aplica', 'Con frecuencia tiene un límite; verifique el del prestamista'],
+              ['Prestamista en la póliza', 'No aplica', 'Como beneficiario de pérdida; las compañías de arrendamiento a menudo piden también ser asegurado adicional'],
+            ],
+          },
+        },
+        {
+          p: 'Las reglas exactas están en las instrucciones de fondeo de cada prestamista y en el contrato de venta a plazos, y cambian de un prestamista a otro. Revíselas en cada venta en lugar de depender de una regla general.',
+        },
+        { h: 'Lista antes de enviar la venta' },
+        {
+          ul: [
+            'La póliza está activa en la fecha de entrega y muestra el VIN del vehículo nuevo.',
+            'La cobertura amplia y de choque está en este vehículo, no solo la de responsabilidad.',
+            'Los deducibles están dentro del límite del prestamista.',
+            'El nombre y la dirección exactos del prestamista aparecen como beneficiario de pérdida.',
+            'El asegurado coincide con el comprador, y con el co-comprador si el prestamista lo exige.',
+            'El comprobante es un documento que el prestamista acepta: tarjeta, binder o página de declaraciones.',
+          ],
+        },
+        { h: 'Qué pasa cuando vence el seguro del comprador' },
+        {
+          p: 'La mayoría de los contratos de financiamiento exigen que el comprador mantenga el seguro del auto. Si vence, el contrato normalmente permite que el prestamista compre cobertura para el vehículo y se la cobre al comprador. La Oficina para la Protección Financiera del Consumidor (CFPB) lo llama seguro impuesto (force-placed); los prestamistas suelen llamarlo seguro de protección de la garantía (CPI).',
+        },
+        {
+          p: 'Según la CFPB, el seguro impuesto protege solo al prestamista, no al conductor, y suele costar mucho más que una póliza que el comprador podría comprar por su cuenta. Para el comprador, significa un pago más alto y ninguna protección de responsabilidad. Para el prestamista, es un préstamo que se volvió más riesgoso.',
+        },
+        {
+          note: 'Un comprador que se va con la cobertura correcta, a un precio que puede seguir pagando, es un mejor préstamo para todos. Vale los cinco minutos en el escritorio.',
+        },
+        { h: 'Dónde entra el GAP' },
+        {
+          p: 'El GAP cubre parte o toda la diferencia entre lo que vale el auto y lo que todavía se debe del préstamo después de una pérdida total. Funciona junto con la cobertura de daños del propio comprador, no en su lugar, así que revise los términos del contrato de GAP antes de decirle al cliente cuánto paga.',
+        },
+        { h: 'Cómo ayuda Universal Dealer Services' },
+        {
+          p: 'Nuestro agente licenciado revisa la póliza de cada comprador contra los requisitos del prestamista antes de la entrega, agrega la cobertura amplia, la de choque y el beneficiario de pérdida cuando faltan, y cotiza con varias aseguradoras para que la cobertura completa quepa en el presupuesto del comprador. El cliente puede elegir cualquier aseguradora. A su concesionario no le cuesta nada, y le pagamos renta por el escritorio.',
+        },
+      ],
+      disclaimer:
+        'Información general, no asesoría legal. Los requisitos cambian según el prestamista; siga las instrucciones de fondeo de cada uno. Los mínimos de Florida son del FLHSMV a noviembre de 2026.',
+      sources: [SRC.cfpbForcePlaced, SRC.cfpbFinancing, SRC.cfpbFifthThird, SRC.flhsmvInsurance],
+    },
+  },
 ];
 
 export const guideIndex = {
@@ -524,7 +784,7 @@ export const guideIndex = {
     title: 'Guides for Florida Dealers',
     metaTitle: 'Insurance Guides for Florida Car Dealers | Universal Dealer Services',
     description:
-      'Plain-language guides for Florida dealers: proof of insurance rules, spot delivery checklists, verification software vs. an in-store agent, and serving Spanish-speaking buyers.',
+      'Plain-language guides for Florida dealers: proof of insurance, buyers with no insurance at delivery, lender insurance requirements, spot deliveries, verification software and Spanish-speaking buyers.',
     lede: 'Practical, sourced guides on insurance at the point of sale, written for GMs, F&I offices and title clerks in Florida.',
     crumb: 'Guides',
     read: 'Read the guide',
@@ -539,7 +799,7 @@ export const guideIndex = {
     title: 'Guías para concesionarios en Florida',
     metaTitle: 'Guías de seguros para concesionarios en Florida | Universal Dealer Services',
     description:
-      'Guías claras para concesionarios en Florida: comprobantes de seguro, lista para entregas inmediatas, software de verificación vs. un agente en sitio y clientes hispanohablantes.',
+      'Guías claras para concesionarios en Florida: comprobantes de seguro, clientes sin seguro, requisitos del prestamista, entregas inmediatas, software de verificación y clientes hispanohablantes.',
     lede: 'Guías prácticas y con fuentes sobre el seguro en el punto de venta, escritas para gerentes generales, oficinas de F&I y encargados de títulos en Florida.',
     crumb: 'Guías',
     read: 'Leer la guía',
