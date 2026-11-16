@@ -1,4 +1,4 @@
-import { siteUrl } from '../seo';
+import { ogImages, siteUrl } from '../seo';
 import { GUIDES, guideBySlug, guideIndex, guidePath } from './data';
 
 const og = (lang, url, title, description, type = 'article') => ({
@@ -8,7 +8,7 @@ const og = (lang, url, title, description, type = 'article') => ({
   locale: lang === 'es' ? 'es_US' : 'en_US',
   title,
   description,
-  images: [{ url: '/hero.jpg', width: 1344, height: 752 }],
+  images: [ogImages[lang]],
 });
 
 export function guideMetadata(slug, lang) {
@@ -27,7 +27,7 @@ export function guideMetadata(slug, lang) {
       },
     },
     openGraph: og(lang, url, c.title, c.description),
-    twitter: { card: 'summary_large_image', title: c.title, description: c.description },
+    twitter: { card: 'summary_large_image', title: c.title, description: c.description, images: [ogImages[lang].url] },
   };
 }
 

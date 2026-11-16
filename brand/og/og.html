@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Barlow+Semi+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:630px;display:grid;grid-template-columns:520px 1fr;font-family:Barlow,sans-serif;background:#fff;overflow:hidden}
+.l{padding:46px 44px 40px 56px;display:flex;flex-direction:column;position:relative}
+.l img{height:118px;width:auto;align-self:flex-start;margin-left:-8px}
+h1{margin-top:34px;font-family:'Barlow Semi Condensed';font-weight:700;font-size:48px;line-height:1.04;color:#101D53;text-wrap:balance}
+p.sub{margin-top:18px;font-weight:600;font-size:27px;line-height:1.2;color:#086BB7;text-wrap:balance}
+p.foot{margin-top:auto;font-size:19px;color:#4b5675;font-weight:500}
+.bar{position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(#101D53 0 45%,#086BB7 45% 100%)}
+.r{background:url(../../public/hero.jpg) 64% 50%/cover no-repeat}
+</style></head><body>
+<div class="l"><div class="bar"></div><img src="../uds-logo-tight.svg" alt=""><h1 id="h"></h1><p class="sub" id="s"></p><p class="foot" id="f"></p></div>
+<div class="r"></div>
+<script>
+const T={en:['An insurance agent inside your dealership.','Free to your store, and we pay you rent.','Licensed · Bilingual · Florida'],
+es:['Un agente de seguros dentro de su concesionario.','Gratis para usted, y le pagamos renta.','Licenciados · Bilingües · Florida']};
+const t=T[new URLSearchParams(location.search).get('lang')==='es'?'es':'en'];
+h.textContent=t[0];s.textContent=t[1];f.textContent=t[2];
+</script></body></html>
