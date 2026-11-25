@@ -28,6 +28,7 @@ const SRC = {
   },
   fs324022: { label: 'Florida Statutes s. 324.022 (property damage liability)', href: 'https://www.flsenate.gov/Laws/Statutes/2025/324.022' },
   fs324021: { label: 'Florida Statutes s. 324.021 (owner liability; dealer loaners)', href: 'https://www.flsenate.gov/Laws/Statutes/2025/324.021' },
+  fs32027: { label: 'Florida Statutes 2026, s. 320.27 (dealer licenses: insurance and surety bond)', href: 'https://www.flsenate.gov/Laws/Statutes/2026/320.27' },
   fs324021y2026: { label: 'Florida Statutes 2026, s. 324.021(9) (owner liability; dealer temporary replacement vehicles)', href: 'https://www.flsenate.gov/Laws/Statutes/2026/324.021' },
   fs626112: { label: 'Florida Statutes s. 626.112 (license required to solicit insurance)', href: 'https://www.flsenate.gov/Laws/Statutes/2025/626.112' },
   fallsLake: {
@@ -914,6 +915,146 @@ export const GUIDES = [
       sources: [SRC.fs324021y2026, SRC.flhsmvInsurance],
     },
   },
+  /* ------------------------------------------------------------------ */
+  {
+    key: 'garage',
+    en: {
+      slug: 'garage-liability-insurance-florida-dealers',
+      title: 'Garage Liability Insurance for Florida Car Dealers',
+      short: 'Garage liability for dealers',
+      description:
+        'What Florida requires for a dealer license ($25,000 garage liability, $10,000 PIP, a $25,000 bond), what garage liability covers, and the coverages dealers pair with it.',
+      lede: 'Every Florida dealer license starts with proof of insurance. The state minimum gets the license issued; it rarely covers what a real claim at a dealership costs. Here’s what the law requires, what a garage policy is for, and what to review at renewal.',
+      blocks: [
+        { h: 'What Florida requires for a dealer license' },
+        {
+          p: 'Under Florida Statutes s. 320.27, a dealer license application must include evidence of insurance with at least $25,000 combined single-limit liability for bodily injury and property damage, plus $10,000 of personal injury protection (PIP):',
+        },
+        {
+          ul: [
+            'Franchised dealers must submit a garage liability insurance policy.',
+            'Independent dealers can submit a garage liability policy, or a general liability policy coupled with a business automobile policy.',
+            'The policy has to cover the whole license period, and the dealer must send the state proof of a renewal or change within 10 calendar days.',
+            'Separately, dealers must deliver a $25,000 surety bond or irrevocable letter of credit every year before the license is issued.',
+          ],
+        },
+        {
+          note: '$25,000 is the minimum to get licensed, not a recommendation. One serious test-drive accident or injury on the lot can exceed it many times over, so most dealers carry much higher limits.',
+        },
+        { h: 'What garage liability is for' },
+        {
+          p: 'A garage liability policy covers the dealership’s liability to other people from running the business. Depending on the policy and carrier, that typically includes:',
+        },
+        {
+          ul: [
+            'Injuries or property damage on your premises, such as a customer who slips in the showroom or service drive.',
+            'Liability from your operations, including vehicles you own or hold for sale when they’re driven for the business. Ask how the policy treats customers on test drives and dealer-plated vehicles.',
+            'Liability after work is finished, such as damage traced to a repair your service department completed.',
+          ],
+        },
+        {
+          p: 'Garage liability doesn’t pay to repair your own inventory or customers’ cars in your care. Those need separate coverages.',
+        },
+        { h: 'Coverages dealers often pair with it' },
+        {
+          table: {
+            head: ['Coverage', 'What it’s for'],
+            rows: [
+              ['Dealer’s open lot (inventory)', 'Physical damage to vehicles you hold for sale: hail, wind, flood, theft and vandalism on the lot.'],
+              ['Garagekeepers', 'Damage to customers’ vehicles while they’re in your care for service or repair.'],
+              ['Dealer surety bond', 'The $25,000 bond or letter of credit the state requires for the license.'],
+              ['Workers’ compensation', 'Required for most Florida employers; covers employee injuries.'],
+              ['Umbrella / excess liability', 'Extra limits on top of the garage policy for a large claim.'],
+            ],
+          },
+        },
+        { h: 'What to review at renewal' },
+        {
+          ol: [
+            'Liability limits compared with your volume, test-drive activity and service work, not just the state minimum.',
+            'How test drives, dealer plates and loaners are covered, and who counts as a permitted driver.',
+            'Inventory values on your open-lot coverage, and the deductibles for wind and hail.',
+            'That proof of the renewed policy and bond reaches the state within 10 days.',
+          ],
+        },
+        { h: 'How we help' },
+        {
+          p: 'Universal Insurance Brokers, the licensed agency behind Universal Dealer Services, quotes garage liability for Florida dealers and compares carriers for you, in English or Spanish. We can also place a licensed agent at a desk in your store to verify customer coverage on every delivery, at no cost to the dealership.',
+        },
+      ],
+      disclaimer:
+        'General information, not legal advice. Requirements are summarized from Florida Statutes s. 320.27 (2026). What a policy covers depends on the policy and carrier.',
+      sources: [SRC.fs32027],
+    },
+    es: {
+      slug: 'seguro-responsabilidad-garaje-concesionarios',
+      title: 'Seguro de responsabilidad de garaje para concesionarios en Florida',
+      short: 'Responsabilidad de garaje',
+      description:
+        'Lo que exige Florida para la licencia de concesionario ($25,000 de responsabilidad de garaje, $10,000 de PIP, fianza de $25,000), qué cubre y qué coberturas se combinan.',
+      lede: 'Toda licencia de concesionario en Florida empieza con un comprobante de seguro. El mínimo del estado permite obtener la licencia, pero rara vez cubre lo que cuesta un reclamo real en un concesionario. Esto es lo que exige la ley, para qué sirve una póliza de garaje y qué revisar al renovar.',
+      blocks: [
+        { h: 'Lo que exige Florida para la licencia de concesionario' },
+        {
+          p: 'Según el artículo 320.27 de los Estatutos de Florida, la solicitud de licencia de concesionario debe incluir un comprobante de seguro con al menos $25,000 de responsabilidad civil de límite único combinado por lesiones corporales y daños a la propiedad, más $10,000 de protección contra lesiones personales (PIP):',
+        },
+        {
+          ul: [
+            'Los concesionarios franquiciados deben presentar una póliza de responsabilidad de garaje.',
+            'Los concesionarios independientes pueden presentar una póliza de responsabilidad de garaje, o una póliza de responsabilidad general junto con una póliza de auto comercial.',
+            'La póliza debe cubrir todo el período de la licencia, y el concesionario debe enviarle al estado el comprobante de una renovación o cambio dentro de 10 días calendario.',
+            'Además, cada año el concesionario debe entregar una fianza de $25,000 o una carta de crédito irrevocable antes de que se emita la licencia.',
+          ],
+        },
+        {
+          note: '$25,000 es el mínimo para obtener la licencia, no una recomendación. Un solo accidente grave en una prueba de manejo o una lesión en el lote puede superarlo muchas veces, por eso la mayoría de los concesionarios tienen límites mucho más altos.',
+        },
+        { h: 'Para qué sirve la responsabilidad de garaje' },
+        {
+          p: 'Una póliza de responsabilidad de garaje cubre la responsabilidad del concesionario frente a otras personas por la operación del negocio. Según la póliza y la aseguradora, normalmente incluye:',
+        },
+        {
+          ul: [
+            'Lesiones o daños a la propiedad en sus instalaciones, como un cliente que se resbala en la sala de exhibición o en el área de servicio.',
+            'La responsabilidad por sus operaciones, incluidos los vehículos que son suyos o que tiene a la venta cuando se manejan por el negocio. Pregunte cómo trata la póliza a los clientes en pruebas de manejo y los vehículos con placa de concesionario.',
+            'La responsabilidad después de terminar un trabajo, como un daño causado por una reparación que hizo su departamento de servicio.',
+          ],
+        },
+        {
+          p: 'La responsabilidad de garaje no paga la reparación de su propio inventario ni de los autos de los clientes que están bajo su cuidado. Eso necesita otras coberturas.',
+        },
+        { h: 'Coberturas que suelen combinarse' },
+        {
+          table: {
+            head: ['Cobertura', 'Para qué sirve'],
+            rows: [
+              ['Lote abierto del concesionario (inventario)', 'Daños físicos a los vehículos que tiene a la venta: granizo, viento, inundación, robo y vandalismo en el lote.'],
+              ['Garagekeepers (vehículos de clientes)', 'Daños a los vehículos de los clientes mientras están bajo su cuidado para servicio o reparación.'],
+              ['Fianza del concesionario', 'La fianza de $25,000 o carta de crédito que exige el estado para la licencia.'],
+              ['Compensación laboral', 'Obligatoria para la mayoría de los empleadores en Florida; cubre las lesiones de los empleados.'],
+              ['Umbrella / responsabilidad en exceso', 'Límites adicionales sobre la póliza de garaje para un reclamo grande.'],
+            ],
+          },
+        },
+        { h: 'Qué revisar al renovar' },
+        {
+          ol: [
+            'Los límites de responsabilidad según su volumen, las pruebas de manejo y el trabajo de servicio, no solo el mínimo del estado.',
+            'Cómo se cubren las pruebas de manejo, las placas de concesionario y los autos de cortesía, y quién cuenta como conductor autorizado.',
+            'El valor del inventario en la cobertura de lote abierto y los deducibles por viento y granizo.',
+            'Que el comprobante de la póliza y la fianza renovadas llegue al estado dentro de 10 días.',
+          ],
+        },
+        { h: 'Cómo le ayudamos' },
+        {
+          p: 'Universal Insurance Brokers, la agencia licenciada detrás de Universal Dealer Services, cotiza responsabilidad de garaje para concesionarios en Florida y compara aseguradoras por usted, en español o en inglés. También podemos poner un agente licenciado en un escritorio de su concesionario para verificar la cobertura de cada cliente en cada entrega, sin costo para el concesionario.',
+        },
+      ],
+      disclaimer:
+        'Información general, no asesoría legal. Los requisitos se resumen del artículo 320.27 de los Estatutos de Florida (2026). Lo que cubre una póliza depende de la póliza y de la aseguradora.',
+      sources: [SRC.fs32027],
+    },
+  },
 ];
 
 export const guideIndex = {
@@ -922,7 +1063,7 @@ export const guideIndex = {
     title: 'Guides for Florida Dealers',
     metaTitle: 'Insurance Guides for Florida Car Dealers | Universal Dealer Services',
     description:
-      'Plain-language guides for Florida dealers: proof of insurance, buyers with no insurance at delivery, lender requirements, spot deliveries, service loaners, verification software and Spanish-speaking buyers.',
+      'Plain-language guides for Florida dealers: proof of insurance, lender requirements, spot deliveries, loaners, garage liability and more, in English and Spanish.',
     lede: 'Practical, sourced guides on insurance at the point of sale, written for GMs, F&I offices and title clerks in Florida.',
     crumb: 'Guides',
     read: 'Read the guide',
@@ -940,7 +1081,7 @@ export const guideIndex = {
     title: 'Guías para concesionarios en Florida',
     metaTitle: 'Guías de seguros para concesionarios en Florida | Universal Dealer Services',
     description:
-      'Guías claras para concesionarios en Florida: comprobantes de seguro, clientes sin seguro, requisitos del prestamista, entregas inmediatas, autos de cortesía, software de verificación y clientes hispanohablantes.',
+      'Guías claras para concesionarios en Florida: comprobante de seguro, requisitos del prestamista, entregas inmediatas, autos de cortesía, seguro de garaje y más.',
     lede: 'Guías prácticas y con fuentes sobre el seguro en el punto de venta, escritas para gerentes generales, oficinas de F&I y encargados de títulos en Florida.',
     crumb: 'Guías',
     read: 'Leer la guía',
