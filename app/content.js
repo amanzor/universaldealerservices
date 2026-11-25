@@ -15,6 +15,8 @@ const sourceLinks = {
   autoproyecto: 'https://sales.autoproyecto.com/?p=35',
   autoDealerToday:
     'https://www.autodealertodaymagazine.com/308753/sales-skyrocket-with-hispanic-market-focus-rr-auto-sales-thrives-in-orland-calif',
+  downeyNissan:
+    'https://www.autoremarketing.com/ar/retail/los-angeles-metro-nissan-store-captures-brands-most-hispanic-buyers/',
 };
 
 const en = {
@@ -106,7 +108,7 @@ const en = {
     cards: [
       {
         title: 'What it looks like on your floor',
-        body: 'Dealers who built bilingual sales teams report doubling their sales to Hispanic customers. The stores winning this traffic aren’t translating — they’re staffing. Our agents give you that capability on day one, without a single hire.',
+        body: 'Downey Nissan built a sales floor that is about 90% bilingual — and in 2017 nearly doubled its sales to Hispanic customers, leading the entire Nissan brand in that segment. The stores winning this traffic aren’t translating — they’re staffing. Our agents give you that capability on day one, without a single hire.',
       },
       {
         title: 'Where it compounds',
@@ -248,6 +250,7 @@ const en = {
       { label: 'Multicultural marketing statistics for dealerships — Demand Local', href: sourceLinks.demandLocal },
       { label: 'Hispanic buyers and industry growth (S&P Global Mobility) — AutoProyecto', href: sourceLinks.autoproyecto },
       { label: 'Bilingual sales lift at R&R Auto Sales — Auto Dealer Today', href: sourceLinks.autoDealerToday },
+      { label: 'Downey Nissan leads the brand with Hispanic buyers (2017) — Auto Remarketing', href: sourceLinks.downeyNissan },
     ],
     copyright: '© 2026 Universal Insurance Brokers. All rights reserved.',
   },
@@ -380,7 +383,7 @@ const es = {
     cards: [
       {
         title: 'Cómo se ve en su piso de ventas',
-        body: 'Los concesionarios que formaron equipos de ventas bilingües reportan haber duplicado sus ventas a clientes hispanos. Los que están ganando este tráfico no están traduciendo — están contratando a la gente correcta. Nuestros agentes le dan esa capacidad desde el primer día, sin una sola contratación.',
+        body: 'Downey Nissan formó un equipo de ventas cerca de 90% bilingüe — y en 2017 casi duplicó sus ventas a clientes hispanos, liderando a toda la marca Nissan en ese segmento. Los que están ganando este tráfico no están traduciendo — están contratando a la gente correcta. Nuestros agentes le dan esa capacidad desde el primer día, sin una sola contratación.',
       },
       {
         title: 'Donde se multiplica',
@@ -522,6 +525,7 @@ const es = {
       { label: 'Estadísticas de marketing multicultural para concesionarios — Demand Local (en inglés)', href: sourceLinks.demandLocal },
       { label: 'Compradores hispanos y crecimiento de la industria (S&P Global Mobility) — AutoProyecto', href: sourceLinks.autoproyecto },
       { label: 'Aumento de ventas con un vendedor bilingüe en R&R Auto Sales — Auto Dealer Today (en inglés)', href: sourceLinks.autoDealerToday },
+      { label: 'Downey Nissan lidera la marca con compradores hispanos (2017) — Auto Remarketing (en inglés)', href: sourceLinks.downeyNissan },
     ],
     copyright: '© 2026 Universal Insurance Brokers. Todos los derechos reservados.',
   },
