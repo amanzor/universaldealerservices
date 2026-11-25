@@ -57,6 +57,7 @@ export const GUIDES = [
   /* ------------------------------------------------------------------ */
   {
     key: 'proof',
+    buyerHref: { en: 'https://www.universalinsurancebroker.com/auto-insurance?utm_source=universaldealerservices&utm_medium=referral&utm_campaign=buyer_note', es: 'https://www.universalinsurancebroker.com/es/auto-insurance?utm_source=universaldealerservices&utm_medium=referral&utm_campaign=buyer_note' },
     en: {
       slug: 'florida-proof-of-insurance-for-dealers',
       title: 'Florida Proof of Insurance for Car Dealers: What Counts and When to Check',
@@ -526,6 +527,7 @@ export const GUIDES = [
   /* ------------------------------------------------------------------ */
   {
     key: 'uninsured',
+    buyerHref: { en: 'https://www.universalinsurancebroker.com/auto-insurance?utm_source=universaldealerservices&utm_medium=referral&utm_campaign=buyer_note', es: 'https://www.universalinsurancebroker.com/es/auto-insurance?utm_source=universaldealerservices&utm_medium=referral&utm_campaign=buyer_note' },
     en: {
       slug: 'customer-no-insurance-at-delivery',
       title: 'Customer Has No Insurance at Delivery? What Florida Dealers Can Do',
@@ -658,6 +660,7 @@ export const GUIDES = [
   /* ------------------------------------------------------------------ */
   {
     key: 'lender',
+    buyerHref: { en: 'https://www.universalinsurancebroker.com/guides/florida-financed-car-insurance?utm_source=universaldealerservices&utm_medium=referral&utm_campaign=buyer_note', es: 'https://www.universalinsurancebroker.com/es/guides/florida-financed-car-insurance?utm_source=universaldealerservices&utm_medium=referral&utm_campaign=buyer_note' },
     en: {
       slug: 'lender-insurance-requirements-financed-cars',
       title: 'Lender Insurance Requirements on Financed Cars: A Checklist for F&I',
@@ -700,6 +703,9 @@ export const GUIDES = [
         },
         {
           p: 'According to the CFPB, force-placed insurance protects only the lender, not the driver, and it is usually much more expensive than a policy the buyer could buy on their own. For the buyer, that means a higher payment and no liability protection. For the lender, it’s a loan that just got riskier.',
+        },
+        {
+          p: 'Some lenders also use vendor’s single interest (VSI) insurance, which the CFPB describes as protecting the lender if the vehicle is damaged or destroyed. Its cost may be passed on to the buyer in the loan, and it doesn’t replace the buyer’s own coverage.',
         },
         {
           note: 'A buyer who leaves with the right coverage at a price they can keep paying is a better loan for everyone. That’s worth five minutes at the desk.',
@@ -759,6 +765,9 @@ export const GUIDES = [
         },
         {
           p: 'Según la CFPB, el seguro impuesto protege solo al prestamista, no al conductor, y suele costar mucho más que una póliza que el comprador podría comprar por su cuenta. Para el comprador, significa un pago más alto y ninguna protección de responsabilidad. Para el prestamista, es un préstamo que se volvió más riesgoso.',
+        },
+        {
+          p: 'Algunos prestamistas también usan un seguro de interés único del vendedor (VSI), que según la CFPB protege al prestamista si el vehículo se daña o se destruye. Su costo puede pasarse al comprador en el préstamo, y no reemplaza la cobertura propia del comprador.',
         },
         {
           note: 'Un comprador que se va con la cobertura correcta, a un precio que puede seguir pagando, es un mejor préstamo para todos. Vale los cinco minutos en el escritorio.',
@@ -922,6 +931,9 @@ export const guideIndex = {
     cta: 'Want a licensed agent handling this in your store? Book a 30-minute walkthrough.',
     ctaButton: 'Book a walkthrough',
     more: 'More guides',
+    buyerTitle: 'Buying a car?',
+    buyerText: 'This page is written for dealerships. For your own car insurance, Universal Insurance Brokers, the agency behind this program, can compare quotes for you in English or Spanish.',
+    buyerLink: 'Get help with your coverage',
   },
   es: {
     path: '/es/guias/',
@@ -937,6 +949,9 @@ export const guideIndex = {
     cta: '¿Quiere un agente licenciado que se encargue de esto en su concesionario? Agende una visita de 30 minutos.',
     ctaButton: 'Agende una visita',
     more: 'Más guías',
+    buyerTitle: '¿Está comprando un auto?',
+    buyerText: 'Esta página está escrita para concesionarios. Para el seguro de su propio auto, Universal Insurance Brokers, la agencia detrás de este programa, le compara cotizaciones en español o en inglés.',
+    buyerLink: 'Ayuda con su seguro',
   },
 };
 
