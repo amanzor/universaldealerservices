@@ -10,7 +10,7 @@
  * languages saying the same thing.
  */
 
-export const REVIEWED = { en: 'November 2026', es: 'noviembre de 2026', iso: '2026-11-16' };
+export const REVIEWED = { en: 'November 2026', es: 'noviembre de 2026', iso: '2026-11-25' };
 
 const SRC = {
   flhsmvInsurance: { label: 'FLHSMV: Insurance requirements', href: 'https://www.flhsmv.gov/insurance/' },
@@ -28,6 +28,7 @@ const SRC = {
   },
   fs324022: { label: 'Florida Statutes s. 324.022 (property damage liability)', href: 'https://www.flsenate.gov/Laws/Statutes/2025/324.022' },
   fs324021: { label: 'Florida Statutes s. 324.021 (owner liability; dealer loaners)', href: 'https://www.flsenate.gov/Laws/Statutes/2025/324.021' },
+  fs324021y2026: { label: 'Florida Statutes 2026, s. 324.021(9) (owner liability; dealer temporary replacement vehicles)', href: 'https://www.flsenate.gov/Laws/Statutes/2026/324.021' },
   fs626112: { label: 'Florida Statutes s. 626.112 (license required to solicit insurance)', href: 'https://www.flsenate.gov/Laws/Statutes/2025/626.112' },
   fallsLake: {
     label: 'Falls Lake Insurance loss control: Spot deliveries',
@@ -776,6 +777,134 @@ export const GUIDES = [
       sources: [SRC.cfpbForcePlaced, SRC.cfpbFinancing, SRC.cfpbFifthThird, SRC.flhsmvInsurance],
     },
   },
+  /* ------------------------------------------------------------------ */
+  {
+    key: 'loaner',
+    en: {
+      slug: 'service-loaner-liability-florida',
+      title: 'Service Loaner Cars in Florida: Keeping the Dealer Liability Protection',
+      short: 'Service loaners and dealer liability',
+      description:
+        'Florida law shields dealers from owner liability on service loaners, if the paperwork is right. What s. 324.021 requires, who it covers, and a loaner-desk checklist.',
+      lede: 'In Florida, owning a car can make you responsible for what someone else does with it. For service loaners, the legislature carved out a protection for dealers, but it depends on three things the service drive has to collect every time.',
+      blocks: [
+        { h: 'Why loaners carry risk in Florida' },
+        {
+          p: 'Florida courts have long held vehicle owners responsible when someone they let drive causes harm, a rule known as the dangerous instrumentality doctrine. Because the dealership usually owns its loaner fleet, a crash in a loaner can point back to the store even when the customer was driving.',
+        },
+        { h: 'The protection in Florida Statutes s. 324.021(9)(c)3' },
+        {
+          p: 'Florida law says a motor vehicle dealer, or the dealer’s leasing or rental affiliate, that provides a temporary replacement vehicle to a service customer whose own vehicle is being held for repair, service or adjustment is not liable solely because it owns the loaner, as long as there is no negligence or criminal wrongdoing by the dealer. It applies whether the loaner is free or rented at a reasonable daily charge, for the period the loaner is with the customer.',
+        },
+        {
+          p: 'In a civil case, that protection depends on the dealer doing three things when the loaner goes out:',
+        },
+        {
+          ol: [
+            'Signing a written rental or use agreement with the customer.',
+            'Getting a copy of the customer’s driver license.',
+            'Getting the customer’s insurance information showing at least Florida’s minimum required coverage.',
+          ],
+        },
+        {
+          p: 'If the license or insurance later turns out to be false, canceled or not in effect, the dealer keeps the protection, unless the dealer actually knew about the problem when it handed over the keys.',
+        },
+        {
+          note: 'Missing any of the three items at the loaner desk can cost the store the protection the statute gives it. Make the agreement, the license copy and the insurance information part of every loaner handoff, with no exceptions for regulars.',
+        },
+        { h: 'What the protection doesn’t cover' },
+        {
+          ul: [
+            'The dealer’s own negligence or criminal wrongdoing. Keeping loaners properly maintained, and not handing keys to someone you know shouldn’t drive, stays on the store.',
+            'Agents, principals and most employees. An employee counts as a service customer only if their personal vehicle is in for service, they get the loaner the same way any customer would, and they aren’t using it for work.',
+            'Vehicles that aren’t service loaners, such as demos, test drives and dealer-plated cars. Those fall under the general rules, so review them with your attorney and your garage policy carrier.',
+          ],
+        },
+        { h: 'A loaner-desk checklist' },
+        {
+          table: {
+            head: ['Step', 'What to collect', 'Tip'],
+            rows: [
+              ['1', 'Signed loaner (rental or use) agreement', 'Use the same form every time; have your attorney review it once.'],
+              ['2', 'Copy of the driver license of the person receiving the loaner', 'Check that it’s current and that the photo matches.'],
+              ['3', 'Insurance information showing at least Florida’s minimum ($10,000 PIP and $10,000 property damage)', 'An ID card or declarations page. If it’s obviously expired, don’t release the car until it’s fixed.'],
+              ['4', 'File copies with the repair order', 'If there’s ever a claim, you’ll need to show all three were collected.'],
+              ['5', 'Loaner maintenance log', 'The protection doesn’t cover the store’s own negligence.'],
+            ],
+          },
+        },
+        { h: 'How Universal Dealer Services helps' },
+        {
+          p: 'Our licensed, bilingual agent can check a service customer’s coverage with the carrier before a loaner goes out, in English or Spanish, and help a customer whose policy has lapsed get covered the same day. It costs the dealership nothing, and we pay you rent for the desk.',
+        },
+      ],
+      disclaimer:
+        'General information, not legal advice. This summarizes Florida Statutes s. 324.021(9)(c)3 as published for 2026. Have your attorney review your loaner agreement and process.',
+      sources: [SRC.fs324021y2026, SRC.flhsmvInsurance],
+    },
+    es: {
+      slug: 'autos-de-cortesia-responsabilidad-florida',
+      title: 'Autos de cortesía en Florida: la protección legal del concesionario',
+      short: 'Autos de cortesía y responsabilidad',
+      description:
+        'La ley de Florida protege al concesionario como dueño de los autos de cortesía, si los papeles están en orden. Qué exige el art. 324.021, a quién cubre y una lista.',
+      lede: 'En Florida, ser dueño de un auto puede hacerlo responsable de lo que otra persona haga con él. Para los autos de cortesía del área de servicio, la ley creó una protección para los concesionarios, pero depende de tres cosas que el área de servicio debe recoger cada vez.',
+      blocks: [
+        { h: 'Por qué los autos de cortesía son un riesgo en Florida' },
+        {
+          p: 'Los tribunales de Florida llevan muchos años responsabilizando a los dueños de vehículos cuando alguien a quien le prestaron el auto causa daños, una regla conocida como la doctrina del instrumento peligroso. Como normalmente el concesionario es dueño de sus autos de cortesía, un accidente en uno de ellos puede apuntar al concesionario aunque manejara el cliente.',
+        },
+        { h: 'La protección del artículo 324.021(9)(c)3 de los Estatutos de Florida' },
+        {
+          p: 'La ley de Florida dice que un concesionario, o su afiliada de arrendamiento o alquiler, que le da un vehículo de reemplazo temporal a un cliente de servicio cuyo vehículo está en reparación, servicio o ajuste no es responsable solo por ser el dueño del auto de cortesía, siempre que el concesionario no haya actuado con negligencia ni cometido un delito. Aplica tanto si el auto de cortesía es gratis como si se cobra una tarifa diaria razonable, durante el tiempo que el cliente lo tiene.',
+        },
+        {
+          p: 'En un caso civil, esa protección depende de que el concesionario haga tres cosas cuando entrega el auto:',
+        },
+        {
+          ol: [
+            'Firmar con el cliente un contrato escrito de alquiler o de uso.',
+            'Obtener una copia de la licencia de conducir del cliente.',
+            'Obtener la información del seguro del cliente que muestre al menos la cobertura mínima exigida en Florida.',
+          ],
+        },
+        {
+          p: 'Si después resulta que la licencia o el seguro eran falsos, estaban cancelados o no estaban vigentes, el concesionario mantiene la protección, a menos que supiera del problema en el momento de entregar las llaves.',
+        },
+        {
+          note: 'Si falta cualquiera de los tres requisitos en el escritorio de autos de cortesía, el concesionario puede perder la protección que le da la ley. Haga que el contrato, la copia de la licencia y la información del seguro formen parte de cada entrega, sin excepciones para los clientes de siempre.',
+        },
+        { h: 'Lo que la protección no cubre' },
+        {
+          ul: [
+            'La propia negligencia del concesionario o un delito. Mantener los autos de cortesía en buen estado, y no entregarle las llaves a alguien que usted sabe que no debería manejar, sigue siendo responsabilidad del concesionario.',
+            'Agentes, dueños y la mayoría de los empleados. Un empleado cuenta como cliente de servicio solo si su vehículo personal está en servicio, recibe el auto de cortesía igual que cualquier cliente y no lo está usando para trabajar.',
+            'Vehículos que no son autos de cortesía de servicio, como autos de demostración, pruebas de manejo y autos con placa de concesionario. Esos siguen las reglas generales, así que revíselos con su abogado y con la aseguradora de su póliza de garaje.',
+          ],
+        },
+        { h: 'Lista para el escritorio de autos de cortesía' },
+        {
+          table: {
+            head: ['Paso', 'Qué recoger', 'Consejo'],
+            rows: [
+              ['1', 'Contrato firmado de alquiler o de uso del auto de cortesía', 'Use siempre el mismo formulario; pídale a su abogado que lo revise una vez.'],
+              ['2', 'Copia de la licencia de conducir de la persona que recibe el auto', 'Revise que esté vigente y que la foto coincida.'],
+              ['3', 'Información del seguro que muestre al menos el mínimo de Florida ($10,000 de PIP y $10,000 de daños a la propiedad)', 'Una tarjeta de seguro o la página de declaraciones. Si está claramente vencida, no entregue el auto hasta resolverlo.'],
+              ['4', 'Archivar las copias con la orden de reparación', 'Si alguna vez hay un reclamo, tendrá que demostrar que recogió las tres cosas.'],
+              ['5', 'Registro de mantenimiento de los autos de cortesía', 'La protección no cubre la propia negligencia del concesionario.'],
+            ],
+          },
+        },
+        { h: 'Cómo ayuda Universal Dealer Services' },
+        {
+          p: 'Nuestro agente licenciado y bilingüe puede verificar con la aseguradora la cobertura del cliente de servicio antes de entregar un auto de cortesía, en español o en inglés, y ayudar el mismo día al cliente cuya póliza venció. Al concesionario no le cuesta nada, y le pagamos renta por el escritorio.',
+        },
+      ],
+      disclaimer:
+        'Información general, no asesoría legal. Resume el artículo 324.021(9)(c)3 de los Estatutos de Florida según la edición de 2026. Pida a su abogado que revise su contrato y su proceso de autos de cortesía.',
+      sources: [SRC.fs324021y2026, SRC.flhsmvInsurance],
+    },
+  },
 ];
 
 export const guideIndex = {
@@ -784,7 +913,7 @@ export const guideIndex = {
     title: 'Guides for Florida Dealers',
     metaTitle: 'Insurance Guides for Florida Car Dealers | Universal Dealer Services',
     description:
-      'Plain-language guides for Florida dealers: proof of insurance, buyers with no insurance at delivery, lender insurance requirements, spot deliveries, verification software and Spanish-speaking buyers.',
+      'Plain-language guides for Florida dealers: proof of insurance, buyers with no insurance at delivery, lender requirements, spot deliveries, service loaners, verification software and Spanish-speaking buyers.',
     lede: 'Practical, sourced guides on insurance at the point of sale, written for GMs, F&I offices and title clerks in Florida.',
     crumb: 'Guides',
     read: 'Read the guide',
@@ -799,7 +928,7 @@ export const guideIndex = {
     title: 'Guías para concesionarios en Florida',
     metaTitle: 'Guías de seguros para concesionarios en Florida | Universal Dealer Services',
     description:
-      'Guías claras para concesionarios en Florida: comprobantes de seguro, clientes sin seguro, requisitos del prestamista, entregas inmediatas, software de verificación y clientes hispanohablantes.',
+      'Guías claras para concesionarios en Florida: comprobantes de seguro, clientes sin seguro, requisitos del prestamista, entregas inmediatas, autos de cortesía, software de verificación y clientes hispanohablantes.',
     lede: 'Guías prácticas y con fuentes sobre el seguro en el punto de venta, escritas para gerentes generales, oficinas de F&I y encargados de títulos en Florida.',
     crumb: 'Guías',
     read: 'Leer la guía',
