@@ -162,6 +162,15 @@ export function GuideView({ guide, lang }) {
       <article className="bg-paper py-12 text-ink lg:py-16">
         <div className="mx-auto max-w-3xl px-5">
           <Blocks blocks={c.blocks} />
+          {guide.buyerHref && (
+            <aside className="mt-10 rounded-sm border border-cyan-deep/30 bg-white p-5">
+              <p className="font-display text-lg font-semibold">{g.buyerTitle}</p>
+              <p className="mt-1 text-sm leading-relaxed text-ink/80">{g.buyerText}</p>
+              <a href={guide.buyerHref[lang]} className="mt-3 inline-block text-sm font-semibold text-cyan-deep underline underline-offset-2 hover:text-ink">
+                {g.buyerLink} →
+              </a>
+            </aside>
+          )}
           <p className="mt-12 border-t border-ink/15 pt-6 text-sm leading-relaxed text-ink/70">{c.disclaimer}</p>
           <h2 className="mt-8 font-display text-lg font-semibold">{g.sources}</h2>
           <ul className="mt-2 space-y-1 text-sm">
